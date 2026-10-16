@@ -66,6 +66,12 @@ The additional `platform/pocket/bsp/pocket/sys_constr.sdc` exists but was **not*
 
 The four generated IP components reference Verilog sources already found in the preserved tree. Two `MISC_FILE` entries point at absent, non-HDL files (`.ppf` and `.cmp`). The successful Quartus flow did not require those files to produce the verified RBF, but a redistributable source release should explain or restore them if appropriate instead of generating invented replacements.
 
+## CP48BF pinout and local-only vendor hydration (2026-10-16)
+
+The Pocket pinout `platform/pocket/bsp/pocket/pinouts/system.tcl` **was independently proved byte-exact** against the pinned `plasticbugs/pocket-core-template` version (Git blob `42534ded84f0dbf3f454f7f4b1b42bc71c43e43c`, SHA-256 `e30e3c804a31aa38f9de8bb6c184f8dea0868b86c03eda4131f5d00ef0034a95`). It can be safely fetched under its original upstream license for local Pocket development; that does not authorize blanket source redistribution.
+
+Run `tools/hydrate-pocket-vendor.py --accept-upstream-licenses --include-local-bridge` from the source checkout **only if** you have the protected original frozen Macross II source and have reviewed the upstream terms. The command retrieves seven unchanged vendor HDL files and this pinout at a fixed upstream commit, and independently copies the exact CP48AY-modified APF bridge from the original local source. All eight vendor HDL plus pinout remain untracked/ignored, rather than distributed in GitHub. Run `tools/audit-quartus-closure.py` to verify declared-source existence and hashes before attempting the documented Quartus command. The closure audit and a fresh build are **not yet executed/verified**.
+
 ## Rebuilding on an appropriate host
 
 These commands reconstruct the **recorded build invocation** once the complete source tree has been legally published or otherwise made available. They have **not** been rerun from a fresh public checkout:
