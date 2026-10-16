@@ -24,17 +24,17 @@ A preservation-oriented FPGA implementation of **Super Spacefortress Macross II*
 
 ## Staged source publication (private; 2026-10-16)
 
-**54 of 77 active Quartus HDL files have been uploaded and independently Git-blob-hash verified against immutable upstream evidence or the frozen local CP48AY audit.** This is not yet an independently buildable source checkout.
+**Verified CP48BD source publication: 69 of 77 active Quartus HDL are committed in the PRIVATE GitHub repository.** The four Quartus QIPs and three project configuration files have been transferred with integrity manifests.
 
-- **35 Pocket platform HDL** files, reused exactly from the [previously published Macross Ver.26 source](https://github.com/augustinwinter/openfpga-nmk16/tree/codex/publication-bootstrap); original notices preserved.
-- **3 additional unchanged Ver.26 HDL**: FX68K's `uaddrPla.sv`, JT03 and JT6295. Original GPL/JT grants and FX68K `microrom.mem`/`nanorom.mem` are present; see [FX68K provenance](reference/rtl/third_party/fx68k/UPSTREAM.md).
-- **13 additional unchanged NMK16 MiSTer HDL**: memory/cache controls, NMK112/IRQ, savestate park, FX68K ALU and original generated T80 Verilog; the upstream GPLv3 text is preserved.
-- **3 one-line JT RAM mapping adaptations**, byte-for-byte reconstructed and hash verified against CP48AY local results.
-- **T80 original source closure:** 13 pinned VHDL files, README/redistribution notice, QIP, GHDL compatibility patch, documentation, and the original reference generator script. The generator script still expects the **upstream** directory layout and is not certified as a local Macross II build command.
+- **51 exact upstream HDL matches**: 38 published Macross Ver.26 source and 13 pinned NMK16 MiSTer source.
+- **3 one-line JT audio LUT modifications**, matching the frozen local Git blob hashes.
+- **14 additional exact frozen Macross II local HDL** from CP48BB (including game integration, CPU/memory timing, Pocket core wrapper, and project-specific modules).
+- **1 project-authored `rtl/pocket_pll.v`**, verified against CP48BC SHA-256 at CP48BD.
+- Original FX68K internal memory files, license notices, T80 VHDL/source generation materials, three Quartus project configuration files, four QIPs and associated manifests are present.
 
-**[SOURCE_PUBLISHING_STATUS.md](SOURCE_PUBLISHING_STATUS.md)** records the 23 still-missing active HDL files and distinct vendor/source rights blockers. The one-shot, **private-repository-only** Mac importer [tools/publish-private-source.py](tools/publish-private-source.py) verifies seven modified HDL hashes and transfers those plus seven project-specific HDL and three ROM-free Quartus configuration files; APF-licensed bridge logic and unverified PLL sources remain withheld from the user's frozen local source. It does not upload ROMs, original artwork, proprietary vendor files or bitstreams. GitHub uploads have not changed the frozen FPGA build or Pocket SD card.
+The remaining **eight active HDL** are four Analogue APF sources (including a modified command bridge) and four Intel/Altera generated files. They are recorded in [VENDOR_SOURCE.md](VENDOR_SOURCE.md) and deliberately **not uploaded** until redistribution rights are established. A [local-only pinned vendor-source hydrator](tools/hydrate-pocket-vendor.py) can supply the seven unchanged upstream counterparts to developers who accept their respective terms. The **required Pocket pinout Tcl** is an additional build input and has not been published or verified against the pinned template. The remaining modified APF bridge requires special handling.
 
-No public GitHub release or repository visibility change is authorized by this staged upload.
+Read [SOURCE_PUBLISHING_STATUS.md](SOURCE_PUBLISHING_STATUS.md), [CROSS_PROJECT_REUSE.md](CROSS_PROJECT_REUSE.md), and [BUILDING.md](BUILDING.md) before attempting a fresh rebuild. **No game ROMs, timing PROMs, original copyrighted artwork, private RBFs, or ROM-containing ZIP packages were uploaded; no public release or repository visibility change was made.** This is not yet a fully reproducible GitHub source checkout.
 
 The project does **not** distribute copyrighted Macross II arcade game ROMs, timing PROM dumps, or uncleared original artwork. Owners must obtain required game data lawfully and assemble it locally. The reproduction guide lists all ten ROM chips with sizes, fixed offsets and SHA-256 checksums, and explains what still needs to be supplied for public release. It also identifies outstanding source and Quartus reproducibility work. Do not confuse the current documentation with a complete public RTL source release.
 
