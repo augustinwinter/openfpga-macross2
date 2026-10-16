@@ -29,17 +29,22 @@ Intel-generated modules retain original Intel/Altera IP license statements. Perm
 
 ## Source hydration WITHOUT copying vendor HDL into Git
 
-[tools/hydrate-pocket-vendor.py](tools/hydrate-pocket-vendor.py) retrieves the **seven unchanged files** from the fixed template commit **to the developer's local clone only**. Each downloaded item must match its previously verified Git blob SHA-1 before it is used. It does not write to Git staging or GitHub, and .gitignore excludes these vendor paths.
+[tools/hydrate-pocket-vendor.py](tools/hydrate-pocket-vendor.py) retrieves **seven exact-byte unchanged APF/Intel HDL files** and **the CP48BF-verified original Pocket pinout Tcl** from the fixed template commit **to a developer's local clone only**. Each downloaded item must match its pinned Git blob SHA-1. It never stages or pushes those files; `.gitignore` excludes all vendor paths.
 
-It requires explicit acknowledgment of applicable upstream terms:
+**CP48BF (2026-10-16) PASS:** the frozen, successfully compiled `platform/pocket/bsp/pocket/pinouts/system.tcl` (45,242 bytes) matches template Git blob `42534ded84f0dbf3f454f7f4b1b42bc71c43e43c` and SHA-256 `e30e3c804a31aa38f9de8bb6c184f8dea0868b86c03eda4131f5d00ef0034a95` exactly. The previous pinout-identity uncertainty is **closed**.
+
+With explicit acknowledgment of applicable upstream licensing, a developer can run:
 
 ```sh
-python3 tools/hydrate-pocket-vendor.py --accept-upstream-licenses
+python3 tools/hydrate-pocket-vendor.py --accept-upstream-licenses --include-local-bridge
+python3 tools/audit-quartus-closure.py
 ```
 
-**This does not make a full independent build:** the modified Macross II `core_bridge_cmd.sv` has no byte-identical public counterpart, and the project requires `platform/pocket/bsp/pocket/pinouts/system.tcl` as declared in `projects/m2_pocket.qsf`. The template has a `system.tcl` with immutable blob SHA `42534ded84f0dbf3f454f7f4b1b42bc71c43e43c`, but **equality to the Macross II frozen local pinout is not yet proved**. The hydration script can optionally fetch the template version under `--include-template-pinout`, but warns it has not been compared; **do not use that version for a claimed reproduction until independently checked**.
+`--include-local-bridge` reads the **modified** `core_bridge_cmd.sv` solely from the developer's protected local `scratch/CP48-clean-macross2/source` directory; verifies original CP48AY Git blob `89afdaaafb4fc406b8f226d593b9913e44395380` and CP48BC SHA-256 `7b40163b4682e926dcab455bb8209864d25e4c349631e23c9913a5b91b137ec9`; copies it into the current clone; and never uploads it. Users without the exact frozen bridge cannot obtain it by hydrating the pristine public template.
 
-The actual local `core_bridge_cmd.sv` should be made available only through a rights-appropriate, exact-byte mechanism after the APF reuse and modification terms have been resolved. Replacing it with the pristine public APF bridge would alter the verified Macross II functionality.
+The separate `tools/audit-quartus-closure.py` checks **77 direct/transitive Quartus HDL declarations**, four QIPs, all declared QSF Tcl/constraints, FX68K microcode hashes, and the nine local-only pinout/vendor/bridge hashes, without compiling or changing anything. It reports absent auxiliary `MISC_FILE` references distinctly. These checks will only be a **source-declaration closure PASS** when run in a fully populated local checkout; they do not demonstrate a Quartus compile, complete transitive \`include audit, hardware/timing qualification or source-redistribution authorization.
+
+The locally modified bridge remains **withheld from GitHub** while its APF modification/redistribution rights are unresolved. Replacing it with the pristine upstream bridge would alter the proven implementation.
 
 ## Four QIPs and missing auxiliary files
 
