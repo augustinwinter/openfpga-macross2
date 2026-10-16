@@ -1,0 +1,404 @@
+{
+  "description": "Actual Quartus-active HDL source roster at private GitHub head; 69 tracked, 8 local-only vendor-related. Recorded CP48BG declared-source pass, not fresh rebuild or license clearance.",
+  "date": "2026-10-16",
+  "baseline_tree_sha": "14bc908e1753ed10eaa057d0bb806fef45863dc6",
+  "source_qsf": "projects/m2_pocket.qsf",
+  "qips": [
+    "platform/pocket/megafunctions/mf_audio_pll.qip",
+    "platform/pocket/megafunctions/mf_audio_pll/mf_audio_pll_0002.qip",
+    "platform/pocket/megafunctions/mf_datatable.qip",
+    "platform/pocket/megafunctions/mf_ddio_bidir_12.qip"
+  ],
+  "counts": {
+    "active_hdl": 77,
+    "tracked_hdl": 69,
+    "local_only_hdl": 8
+  },
+  "files": [
+    {
+      "path": "derived/jt12_exprom.v",
+      "status": "tracked_verified",
+      "git_blob_sha1": "cc3f914298e5dcb593f14deccb1146ed2b52113a"
+    },
+    {
+      "path": "derived/jt12_logsin.v",
+      "status": "tracked_verified",
+      "git_blob_sha1": "8ffaccf92b84b351ee4261d213494e058ef1b3c0"
+    },
+    {
+      "path": "derived/jt49_exp.v",
+      "status": "tracked_verified",
+      "git_blob_sha1": "63ea777ade710baa54df72533768f455b5fef1ac"
+    },
+    {
+      "path": "derived/sdram.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "608c0a97e199a96dda122f0aa081e7262e1aeaff"
+    },
+    {
+      "path": "derived/sdram_arb.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "82e98256a82dda476be6070df9296a40bb748431"
+    },
+    {
+      "path": "derived/sdram_req.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "44c4c577dd6842b7c19d1b2b104eda97bafae753"
+    },
+    {
+      "path": "derived/tdragon2_core.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "fcfbeae8c2ddf157a8b500faa22ff54e3afdcb3c"
+    },
+    {
+      "path": "derived/video_macross2.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "c344f1e68639c40a40754c046821d1b19914552c"
+    },
+    {
+      "path": "platform/pocket/audio/audio_mixer.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "52751bb8c3c779f158520f2b661cbd562b5dc403"
+    },
+    {
+      "path": "platform/pocket/audio/filters/arcade_filters.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "aaa5a5273f7e1e64852390059c330f45fe6f47a4"
+    },
+    {
+      "path": "platform/pocket/audio/filters/audio_filters.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "bcdbf6614d97caaa1c27d5175b4ca5ce3399355f"
+    },
+    {
+      "path": "platform/pocket/audio/filters/audio_mix.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "6b70b7dc0d80267cef4f7b30efe43b755b20f00d"
+    },
+    {
+      "path": "platform/pocket/audio/filters/dc_blocker.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "30cc92d6412d683c74bf9d82bb7edee7e1140413"
+    },
+    {
+      "path": "platform/pocket/audio/filters/filter_loader.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "9e2276829d44621696c79a430a607a96db681811"
+    },
+    {
+      "path": "platform/pocket/audio/filters/filters_rom.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "e793ee2d02dbb6a38ca9383f7294a9b735c27ecb"
+    },
+    {
+      "path": "platform/pocket/audio/filters/iir_filter.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "81e4b60ec225ff5a315200d621001412d07da53a"
+    },
+    {
+      "path": "platform/pocket/audio/filters/iir_filter_tap.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "7e9ca2353b192b17bbcc7532784538622ffadabc"
+    },
+    {
+      "path": "platform/pocket/audio/pocket_i2s.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "2133e44621fd9cefd1f772ca6167ab4be19ad8fd"
+    },
+    {
+      "path": "platform/pocket/bsp/pocket/apf_top.sv",
+      "status": "external_local_only",
+      "local_sha256": "b24c9c77a28a4b2bb6f2c55cd02baaeb56f19a197370ad797a77bb5c2f2c6d47"
+    },
+    {
+      "path": "platform/pocket/helpers/synch_2.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "ab2477c69740a84d58a7180af4768b660d66cb05"
+    },
+    {
+      "path": "platform/pocket/helpers/synch_3.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "90b1e47aae4438551d4f2dc48a80dffd94ab989b"
+    },
+    {
+      "path": "platform/pocket/interface/analog2dpad.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "eee3c7f41618fd53750a9f975b460c20dd3df233"
+    },
+    {
+      "path": "platform/pocket/interface/data_loader.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "190a2e24719cf1e79305eb29ec56984f70a32f9b"
+    },
+    {
+      "path": "platform/pocket/interface/data_unloader.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "836013ec0880a24b168d760d002b4e3efad141ea"
+    },
+    {
+      "path": "platform/pocket/interface/gamepad.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "66d6683b81bc029cd29de686406026ecbf138261"
+    },
+    {
+      "path": "platform/pocket/interface/interact.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "f50c52dfbc1df8d49800c0f033fe2116064644b4"
+    },
+    {
+      "path": "platform/pocket/interface/joypad.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "b29826a362f9d435f591a4a3a1a9ffb0b46926a7"
+    },
+    {
+      "path": "platform/pocket/interface/mame_keymap.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "989ce34c47cd6f07c80dbb17de24c576bd90aa27"
+    },
+    {
+      "path": "platform/pocket/interface/mame_keymap_f.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "9f024653d919922b220317d87396c1f72f99fc34"
+    },
+    {
+      "path": "platform/pocket/interface/pause_crtl.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "961c4438895b176b22cf8a5fe0d6ac6b44a9a91a"
+    },
+    {
+      "path": "platform/pocket/interface/usb_mouse.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "c0fcd339899b1a3fb8c9ace8608cb293a1b6e0cd"
+    },
+    {
+      "path": "platform/pocket/megafunctions/mf_audio_pll.v",
+      "status": "external_local_only",
+      "local_sha256": "f52a39ef0c865727279c402cd3d734f506496b7a1dc3f5b4d66d78ca30b37259"
+    },
+    {
+      "path": "platform/pocket/megafunctions/mf_audio_pll/mf_audio_pll_0002.v",
+      "status": "external_local_only",
+      "local_sha256": "94df902acb41f1349bf6d4777a2c42ca0191d3b664850beb2937b6869fa6f400"
+    },
+    {
+      "path": "platform/pocket/megafunctions/mf_datatable.v",
+      "status": "external_local_only",
+      "local_sha256": "af996b1eed7a37567b1ace181ff64427ae2f9e8fcf2d730641e8c1bc91278f92"
+    },
+    {
+      "path": "platform/pocket/megafunctions/mf_ddio_bidir_12.v",
+      "status": "external_local_only",
+      "local_sha256": "73674edb40a6314f9b00829942bedcad9e183515bcdbb327095f96401799c536"
+    },
+    {
+      "path": "platform/pocket/memory/dpram_hs.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "32bf74db662f94e46dc3b2de23b1ca726848da09"
+    },
+    {
+      "path": "platform/pocket/memory/spram_hs.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "df372997774edef2305a07d39ee9d23269853482"
+    },
+    {
+      "path": "platform/pocket/memory/sram.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "a035f5c8ff1bc1ff8c0b743bceaf4e26dda32a1d"
+    },
+    {
+      "path": "platform/pocket/peripherals/core_bridge_cmd.sv",
+      "status": "external_local_only",
+      "local_sha256": "7b40163b4682e926dcab455bb8209864d25e4c349631e23c9913a5b91b137ec9"
+    },
+    {
+      "path": "platform/pocket/peripherals/io_bridge_peripheral.sv",
+      "status": "external_local_only",
+      "local_sha256": "077191434dfd7ca24cce83945788e41b4d0a53f16e34153683d091a7e855806b"
+    },
+    {
+      "path": "platform/pocket/peripherals/io_pad_controller.sv",
+      "status": "external_local_only",
+      "local_sha256": "33e27048825c292a7cbeaadb00507aea2d6601719e597890fdd09c41371186f9"
+    },
+    {
+      "path": "platform/pocket/support/autofire.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "1df90de56ed18dc95f142aeb5615af12178d2c18"
+    },
+    {
+      "path": "platform/pocket/support/data_io.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "7118d0366845bba785ce174b3651c305dfefb911"
+    },
+    {
+      "path": "platform/pocket/support/hiscore.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "36979ac7ff47413d555573d6b72121b78c04e7e9"
+    },
+    {
+      "path": "platform/pocket/support/hiscore_io.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "beb0f6edf2d9b2598bd6740645c59fb67fdba652"
+    },
+    {
+      "path": "platform/pocket/support/nvram.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "ee128c0c256f1386d719810e078b7001661528e3"
+    },
+    {
+      "path": "platform/pocket/support/save_io.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "f98625492520309170c42f3fc5c7ef6670ffe42f"
+    },
+    {
+      "path": "platform/pocket/video/scanlines.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "390c19797af24df4779e9106c94c6350d427dec6"
+    },
+    {
+      "path": "platform/pocket/video/scanlines_generator.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "94a6536479f65af1f2b092f1121b0f9f218a99c3"
+    },
+    {
+      "path": "platform/pocket/video/shadowmask.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "e062b2db48114fc8591379721aed25cdec5b16fb"
+    },
+    {
+      "path": "platform/pocket/video/video_mixer.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "5b3a04817775890672e5af52e96b5750bcc00706"
+    },
+    {
+      "path": "reference/rtl/bjtwin/video_timing.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "d4c45bcb151b7b0239be9fd95178fc1a72b38fb2"
+    },
+    {
+      "path": "reference/rtl/nmk112/nmk112.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "d0a2a2f234e558e0a83cd486eb683bdbe419c28d"
+    },
+    {
+      "path": "reference/rtl/nmk_irq/nmk_irq.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "86a64d141e34a2444552611f275dfbb71494ade6"
+    },
+    {
+      "path": "reference/rtl/oki_rom_cache.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "82b408ec870cc5c82ed4f110f29f7bb82ddab828"
+    },
+    {
+      "path": "reference/rtl/rom_cache1.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "ca2901120904c1d6fbb5f471c744b79507c6e25a"
+    },
+    {
+      "path": "reference/rtl/rom_cache1_byte.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "b046dcbbad681a6c0b0d4d1be62ecf6f39b5d5ec"
+    },
+    {
+      "path": "reference/rtl/rom_cache_n.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "5f603b87fb2b1e04a133334b4b6a914551f52647"
+    },
+    {
+      "path": "reference/rtl/rom_cache_n_byte.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "cd69934ca74fd91b412150103dc41849a27949cc"
+    },
+    {
+      "path": "reference/rtl/savestate/ss_m68k_park.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "52a87a39d3b869562fefe5ec3c09ebdb2d50a3f7"
+    },
+    {
+      "path": "reference/rtl/savestate/ss_z80_park.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "5cf3d79cb13988fcc915112ac2c0065865eb910f"
+    },
+    {
+      "path": "reference/rtl/third_party/fx68k/fx68k.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "b326f23a9f8dd13d58e872ebf0db2c26d8914919"
+    },
+    {
+      "path": "reference/rtl/third_party/fx68k/fx68kAlu.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "189f6ac46268abe7b7e49bac1e091f66ae78cf4b"
+    },
+    {
+      "path": "reference/rtl/third_party/fx68k/uaddrPla.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "e24e951e3fb643a1894f278237aec2bc5b281375"
+    },
+    {
+      "path": "reference/rtl/third_party/jt12/hdl/jt03.v",
+      "status": "tracked_verified",
+      "git_blob_sha1": "8092c9e5195fa11731fc34712b8385d65a189a44"
+    },
+    {
+      "path": "reference/rtl/third_party/jt6295/hdl/jt6295.v",
+      "status": "tracked_verified",
+      "git_blob_sha1": "365832fffa5d5ac598c8cd7cc79d63ffb446162c"
+    },
+    {
+      "path": "reference/rtl/third_party_gen/t80/T80s.v",
+      "status": "tracked_verified",
+      "git_blob_sha1": "fa013f8413bc4709b24140af6c89e40b718da915"
+    },
+    {
+      "path": "reference/rtl/tile_prefetch_byte.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "d3847671ac8a4b4871a47fbe6b186d8acac457f2"
+    },
+    {
+      "path": "rtl/m2_apf_loader.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "21deedbbe51c1d0fb0442a2f83985b4309729f94"
+    },
+    {
+      "path": "rtl/m2_audio_cdc.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "eaa03421de6fd15676bf40815fa7f7af2241c488"
+    },
+    {
+      "path": "rtl/m2_gameplay_video.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "708950c15939969623ef9403d3f278d07294609e"
+    },
+    {
+      "path": "rtl/m2_main_sdram.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "ad885ba754d556a9ccf65aa55a27ae135159f7da"
+    },
+    {
+      "path": "rtl/m2_memory.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "2f3fba18e3cf997563fcd2855e96234f9879a6c3"
+    },
+    {
+      "path": "rtl/m2_pocket_machine.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "355b77933412d53196905eabaef7548507afb204"
+    },
+    {
+      "path": "rtl/m2_prom_guard.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "e56292c466acc0daed939509c0fef27072d1773f"
+    },
+    {
+      "path": "rtl/pocket_pll.v",
+      "status": "tracked_verified",
+      "git_blob_sha1": "697626f009c642a99f558fe44b5a0de531eca180"
+    },
+    {
+      "path": "target/pocket/core_top.sv",
+      "status": "tracked_verified",
+      "git_blob_sha1": "e8fc88becb6a264518b4c948cb6af8eb0f39a488"
+    }
+  ]
+}
