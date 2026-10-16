@@ -3,7 +3,7 @@
 
 Run only from a FRESH clone of augustinwinter/openfpga-macross2.
 Reads, never changes, the verified source at scratch/CP48-clean-macross2/source.
-Copies only whitelisted ROM-free files into this PRIVATE repository and pushes
+Copies only whitelisted ROM-free, non-APF and non-vendor-IP files into this PRIVATE repository and pushes
 the commit after local byte/hash and remote-visibility checks.
 Requires git and authenticated GitHub CLI (gh).
 Does NOT import proprietary Analogue APF or Intel/Altera generated IP.
@@ -32,8 +32,6 @@ PROVEN = {
     "derived/video_macross2.sv": "c344f1e68639c40a40754c046821d1b19914552c",
     "reference/rtl/third_party/fx68k/fx68k.sv":
         "b326f23a9f8dd13d58e872ebf0db2c26d8914919",
-    "platform/pocket/peripherals/core_bridge_cmd.sv":
-        "89afdaaafb4fc406b8f226d593b9913e44395380",
     "target/pocket/core_top.sv": "e8fc88becb6a264518b4c948cb6af8eb0f39a488",
 }
 PROJECT = [
@@ -44,7 +42,6 @@ PROJECT = [
     "rtl/m2_memory.sv",
     "rtl/m2_pocket_machine.sv",
     "rtl/m2_prom_guard.sv",
-    "rtl/pocket_pll.v",
 ]
 PROJECT_CONFIG = [
     "projects/m2_pocket.qpf",
@@ -149,7 +146,7 @@ def main() -> None:
                 if relative in PROVEN else "Macross II local project/config source",
         })
     print("Verified", len(inventory), "ROM-free local source files.")
-    print("Verified eight existing CP48AY modified-file hashes.")
+    print("Verified seven existing CP48AY modified-file hashes.")
     for entry in inventory:
         print("  ", entry["path"], entry["sha256"][:16])
 
@@ -189,7 +186,7 @@ def main() -> None:
     if not json.loads(run("gh", "api", f"repos/{REPOSITORY}")).get("private"):
         stop("Repository visibility changed before commit")
     run("git", "commit", "-m",
-        "Import 16 exact local Macross II HDL files and ROM-free Quartus configs")
+        "Import 14 exact local Macross II HDL files and ROM-free Quartus configs")
     sha = run("git", "rev-parse", "HEAD")
     run("git", "push", "origin", "HEAD:main")
     if run("git", "rev-parse", "HEAD") != run(
@@ -197,10 +194,10 @@ def main() -> None:
     ):
         stop("Push result requires investigation")
     print("PRIVATE GITHUB IMPORT VERIFIED:", sha)
-    print("ACTIVE HDL TRANSFERRED: 16")
+    print("ACTIVE HDL TRANSFERRED: 14")
     print("PROJECT CONFIG FILES TRANSFERRED: 3")
     print("NO ORIGINAL SOURCE MODIFIED; NO ROMS/ARTWORK/SD/FPGA BINARIES TRANSFERRED")
-    print("Vendor APF/Intel IP and remaining Quartus QIPs STILL REQUIRE REVIEW")
+    print("Vendor APF bridge, PLL/IP files and remaining Quartus QIPs STILL REQUIRE REVIEW")
 
 
 if __name__ == "__main__":
