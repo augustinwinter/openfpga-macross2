@@ -6,7 +6,7 @@
 
 ### Existing verified build, no further FPGA recompilation
 
-The project owner elected to **skip a fresh Quartus rebuild**. The existing tested `bitstream.rbf_r` is the protected reference; ROM-free metadata can be recovered from historical packages using [`tools/import-pocket-metadata.py`](tools/import-pocket-metadata.py), which neither rebuilds nor uploads the bitstream. The importer must record the exact existing metadata version; a historical RC1 package is not automatically a newly tested beta. The publication is still **private** pending the source/vendor licensing and game-art rights documented in [`RELEASE_READINESS.md`](RELEASE_READINESS.md).
+The project owner elected to **skip a fresh Quartus rebuild**. The existing tested `bitstream.rbf_r` is the protected reference; ROM-free metadata can be preserved from historical packages using [`tools/import-pocket-metadata.py`](tools/import-pocket-metadata.py), which neither rebuilds nor uploads the bitstream. **Distinct RC1 and beta metadata are preserved as separate historical snapshots** with their recorded version and file hashes; no snapshot is automatically selected as the tested public beta or root install configuration. The publication is still **private** pending the source/vendor licensing and game-art rights documented in [`RELEASE_READINESS.md`](RELEASE_READINESS.md).
 ## 1. What you need and what cannot be redistributed
 
 You need (a) an Analogue Pocket and microSD card; (b) a legally obtained, correctly dumped **Japanese `macross2` arcade ROM set** with the specific ten files below; (c) an authorized openFPGA core distribution and its `bitstream.rbf_r`, metadata and platform support files; and (d) platform art where licensed for redistribution, or an image you have the right to use.
