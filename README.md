@@ -22,6 +22,16 @@ A preservation-oriented FPGA implementation of **Super Spacefortress Macross II*
 
 **[tools/convert-rbf.py — Pocket FPGA bitstream conversion](tools/convert-rbf.py)**
 
+## Staged source publication (private; 2026-10-16)
+
+Controlled source uploads have resumed, using **exact-byte verified files previously reviewed and published with Macross Ver.26**:
+
+- **5 FX68K companions**: original `LICENSE`, `fx68k.txt` authorship/license grant, `microrom.mem`, `nanorom.mem`, and `uaddrPla.sv`. Their source pin, SHA-256 and Git blob hashes are documented in [FX68K UPSTREAM.md](reference/rtl/third_party/fx68k/UPSTREAM.md).
+- **10 original licensed Pocket integration files**: filters, hiscore/NVRAM, scanlines and shadowmask, with unchanged notices and verified blob hashes. See [Pocket UPSTREAM-REVIEWED.md](platform/pocket/UPSTREAM-REVIEWED.md).
+
+**15 source/license files uploaded and re-fetched with matching hashes**, plus two provenance records. This is an **incomplete** source publication, not a cleared RTL binary/release or new independent Quartus rebuild. Locally modified FX68K, JT tables, core integration and vendor-generated IP remain frozen and excluded pending file-by-file publication review. See [CROSS_PROJECT_REUSE.md](CROSS_PROJECT_REUSE.md) for the full 77-active-HDL audit; **no game ROMs, timing PROMs or proprietary artwork were uploaded.**
+
+
 The project does **not** distribute copyrighted Macross II arcade game ROMs, timing PROM dumps, or uncleared original artwork. Owners must obtain required game data lawfully and assemble it locally. The reproduction guide lists all ten ROM chips with sizes, fixed offsets and SHA-256 checksums, and explains what still needs to be supplied for public release. It also identifies outstanding source and Quartus reproducibility work. Do not confuse the current documentation with a complete public RTL source release.
 
 ## Expected Pocket installation
