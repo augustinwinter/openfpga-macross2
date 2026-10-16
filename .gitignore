@@ -35,6 +35,8 @@ release/
 *.vcd
 *.fst
 *.log
+__pycache__/
+*.pyc
 build_id.mif
 
 # macOS and editor sidecars.
