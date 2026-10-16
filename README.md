@@ -1,3 +1,7 @@
+<img width="522" height="165" alt="macrossII_arcade_banner" src="https://github.com/user-attachments/assets/557417e2-baf1-4296-97d2-134e15369ddc" />
+
+
+
 # Macross II — Analogue Pocket openFPGA
 
 A preservation-oriented FPGA implementation of **Super Spacefortress Macross II** (Japanese NMK165 arcade hardware) for the Analogue Pocket. Maintained by August.
