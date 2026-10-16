@@ -78,6 +78,27 @@ The user ran a read-only Git blob content-hash comparison from the **actual froz
 
 The [kuzearcade/Arcade-NMK16_MiSTer](https://github.com/kuzearcade/Arcade-NMK16_MiSTer) repository is an additional upstream evidence source, **not a replacement for the tested Pocket RTL**. A GitHub read on 2026-10-16 identified commit `4c9b923a87dcefee27574a8a06361e47e8e9b963`, tree `4a5f1a57bef1b0a02f5879e7defb6b490e33169e`, with **796 tracked blobs**. It contains paths corresponding to previously unmatched modules, including `rtl/tdragon2/tdragon2_core.sv`, `rtl/macross2/video_macross2.sv`, `rtl/nmk112/nmk112.sv`, `rtl/nmk_irq/nmk_irq.sv`, `rtl/rom_cache*`, `rtl/oki_rom_cache.sv`, `rtl/sdram*.sv` and `rtl/third_party_gen/t80/T80s.v`. Those are **candidate related filenames, not yet proven identical local files**. Compare SHA-1 Git blobs against the **fixed** upstream tree before carrying forward attribution or concluding that the Pocket integration modified them.
 
+## CP48AW / CP48AX — two further pinned-source comparisons
+
+**CP48AW:** The user compared the **39** HDL files not identical to Ver.26 against upstream `kuzearcade/Arcade-NMK16_MiSTer` at commit `4c9b923a87dcefee27574a8a06361e47e8e9b963` / tree `4a5f1a57bef1b0a02f5879e7defb6b490e33169e`: **13 exact source matches**, 9 same-name different-byte versions, and 17 not present under the same basename. Exact upstream components include NMK112, NMK IRQ, BG timing, ROM caches, M68K/Z80 savestate park, FX68K ALU, and **the Yosys-generated T80`s netlist** (generated `T80s.v` is exact-byte identical to upstream). The [upstream T80 generator script](https://github.com/kuzearcade/Arcade-NMK16_MiSTer/blob/master/tools/gen_t80_verilog.sh), [compatibility patch](https://github.com/kuzearcade/Arcade-NMK16_MiSTer/blob/master/rtl/third_party_gen/t80/ghdl-compat.patch) and [dependency pin](https://github.com/kuzearcade/Arcade-NMK16_MiSTer/blob/master/deps.lock) provide a credible, already-written regeneration route; regeneration was not rerun locally.
+
+**CP48AX:** Among the 17 not matched by basename, **9** have Pocket-template counterparts at [plasticbugs/pocket-core-template `c77563fa84bcc5754d5f1f6ba51168e8849f0e1d`](https://github.com/plasticbugs/pocket-core-template/tree/c77563fa84bcc5754d5f1f6ba51168e8849f0e1d). A local Git blob hash comparison established **7 exact**, **2 different**: `platform/pocket/peripherals/core_bridge_cmd.sv` and `target/pocket/core_top.sv`. Five generated vendor megafunction and two interface files exactly match source, but exactness **does not resolve vendor redistribution terms**. The 8 remaining unmatched local filenames are the `rtl/m2_*.sv` files and `rtl/pocket_pll.v`.
+
+**Final active-HDL categorization, with no duplicate counting:**
+
+| Class | Count |
+|---|---:|
+| Exact earlier Macross Ver.26 publication | 38 |
+| Additional exact NMK16 MiSTer | 13 |
+| Additional exact pinned Pocket template | 7 |
+| **Exact-byte upstream correspondences** | **58 of 77 (75.3%)** |
+| Same-name but different-byte candidate ancestors | **11 of 77 (14.3%)** |
+| No matching filename in the three compared trees | **8 of 77 (10.4%)** |
+
+The eleven modified-candidate files are `derived/jt12_exprom.v`, `derived/jt12_logsin.v`, `derived/jt49_exp.v`, `derived/sdram.sv`, `derived/sdram_arb.sv`, `derived/sdram_req.sv`, `derived/tdragon2_core.sv`, `derived/video_macross2.sv`, `reference/rtl/third_party/fx68k/fx68k.sv`, `platform/pocket/peripherals/core_bridge_cmd.sv`, `target/pocket/core_top.sv`. **Do not replace these with upstream versions or presume their changes are harmless.**
+
+**Next gate:** perform bounded, read-only diffs of these 11 against their *fixed upstream commits*, preserving individual file/delta counts and distinguishing functional edits from comment or build-configuration differences. Then separately document the creation and ownership of the eight Macross II-specific filenames. A file's lack of a matching filename does not prove independent authorship or licensing clearance.
+
 ## Outcome required for closing CP48AV
 
 A read-only inventory report from the actual local **Macross II clean source**, showing exact matches, basename-related versions, and absent published counterparts. Only after reviewing that report should we import the original Macross **license evidence and attribution** for specifically matched components. Never silently copy/source-replace/overwrite active RTL, the private release, or Pocket SD files.
