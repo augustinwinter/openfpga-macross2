@@ -5,9 +5,10 @@ Original upstream licenses still apply. This script does not grant license right
 does not place vendor files in Git, and does not substitute for legal clearance.
 Requires explicit --accept-upstream-licenses; never overwrites existing bytes.
 
-The eight files are the 7 CP48AX-exact vendor/template HDL counterparts plus the
-template's pinout Tcl. Unlike the 7 HDL, the pinout Tcl has NOT YET been confirmed
-byte-identical to the successful frozen Macross II source: compare before compiling.
+The eight unchanged files are the seven CP48AX-exact vendor/template HDL and the
+pinout Tcl verified against frozen Macross II at CP48BF. The locally modified APF
+command bridge can optionally be imported byte-exact from the frozen Macross II
+source tree; it is NEVER retrieved from the unmodified upstream template.
 """
 
 import argparse
@@ -34,10 +35,15 @@ EXPECTED = {
         "0db807d1d41609d30a1fbb0acc8278dc4737d6b1",
     "platform/pocket/megafunctions/mf_ddio_bidir_12.v":
         "6bac1ab99a010304edf88808197fa7703ac340b9",
+    "platform/pocket/bsp/pocket/pinouts/system.tcl":
+        "42534ded84f0dbf3f454f7f4b1b42bc71c43e43c",
 }
-PINOUT = (
-    "platform/pocket/bsp/pocket/pinouts/system.tcl",
-    "42534ded84f0dbf3f454f7f4b1b42bc71c43e43c",
+BRIDGE = "platform/pocket/peripherals/core_bridge_cmd.sv"
+BRIDGE_BLOB = "89afdaaafb4fc406b8f226d593b9913e44395380"
+BRIDGE_SHA256 = "7b40163b4682e926dcab455bb8209864d25e4c349631e23c9913a5b91b137ec9"
+FROZEN_SOURCE = (
+    Path.home() / "Documents/Codex/MacrossII-NMK165"
+    / "scratch/CP48-clean-macross2/source"
 )
 
 
@@ -63,8 +69,8 @@ def main() -> None:
         help="Confirm you will obtain/use the upstream APF and Intel sources under their own licenses",
     )
     parser.add_argument(
-        "--include-template-pinout", action="store_true",
-        help="Also hydrate unverified template system.tcl; compare its hash with the frozen successful build before compiling",
+        "--include-local-bridge", action="store_true",
+        help="Also import byte-exact modified APF bridge from the protected local Macross II source (not from template and never upload)",
     )
     args = parser.parse_args()
     if not args.accept_upstream_licenses:
@@ -80,8 +86,6 @@ def main() -> None:
         raise RuntimeError("Run from a Macross II repository clone, not a source copy")
 
     items = list(EXPECTED.items())
-    if args.include_template_pinout:
-        items.append(PINOUT)
 
     downloaded = []
     for relative, expected_sha in items:
@@ -108,6 +112,24 @@ def main() -> None:
             )
         downloaded.append((relative, target, data, expected_sha))
 
+    if args.include_local_bridge:
+        original = FROZEN_SOURCE / BRIDGE
+        if not original.is_file() or original.is_symlink():
+            raise RuntimeError(f"Frozen APF bridge missing or symlink: {original}")
+        data = original.read_bytes()
+        if (git_blob(data), hashlib.sha256(data).hexdigest()) != (
+            BRIDGE_BLOB, BRIDGE_SHA256
+        ):
+            raise RuntimeError(
+                "Frozen APF bridge does not match CP48AY/CP48BC; do not import"
+            )
+        target = root / BRIDGE
+        if target.is_symlink():
+            raise RuntimeError(f"Refusing destination symlink: {target}")
+        if target.exists() and target.read_bytes() != data:
+            raise RuntimeError("Existing modified bridge differs; no overwrite")
+        downloaded.append((BRIDGE, target, data, BRIDGE_BLOB))
+
     for relative, target, data, sha in downloaded:
         if not target.exists():
             target.parent.mkdir(parents=True, exist_ok=True)
@@ -117,11 +139,11 @@ def main() -> None:
         print("VERIFIED:", relative, sha)
 
     print("\nHYDRATION COMPLETE — local files only, none staged or pushed.")
-    print("CHECK: the modified APF core_bridge_cmd.sv is NOT supplied here.")
-    if args.include_template_pinout:
-        print("WARNING: pinout Tcl lineage not yet compared to Macross II frozen source.")
+    if args.include_local_bridge:
+        print("VERIFIED: modified APF bridge imported from frozen source, never staged.")
     else:
-        print("CHECK: the required pinout system.tcl is NOT supplied here.")
+        print("CHECK: exact modified APF bridge NOT imported; use --include-local-bridge on the original Mac.")
+    print("VERIFIED: pinout system.tcl matches CP48BF frozen local source.")
     print("No FPGA synthesis was run. Vendor terms continue to apply.")
 
 
