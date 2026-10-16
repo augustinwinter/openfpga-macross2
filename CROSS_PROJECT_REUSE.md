@@ -4,7 +4,7 @@
 
 ## Authoritative comparison points
 
-The original Macross project is [augustinwinter/openfpga-nmk16](https://github.com/augustinwinter/openfpga-nmk16) (public). Its default `main` branch is a release-facing README; the engineering/publication material is on [`codex/publication-bootstrap`](https://github.com/augustinwinter/openfpga-nmk16/tree/codex/publication-bootstrap). The **fixed comparison ref** for our source inventory is `17800b2c7292cecce9169acee4daf2e62914a36e` (138 Git blobs at the inspection checkpoint, 111 files under `modules/` and `platform/`). Keeping an immutable ref prevents updates on the moving branch from changing an audit result.
+The original Macross project is [augustinwinter/openfpga-nmk16](https://github.com/augustinwinter/openfpga-nmk16) (public). Its default `main` branch is a release-facing README; the engineering/publication material is on [`codex/publication-bootstrap`](https://github.com/augustinwinter/openfpga-nmk16/tree/codex/publication-bootstrap). The **fixed comparison ref** for our source inventory is `17800b2c7292cecce9169acee4daf2e62914a36e` (138 Git blobs at the inspection checkpoint, 111 files under `modules/` and `platform/`). The commit's actual Git **tree SHA** (used for direct raw tree API retrieval) is `816579cab1863414d87033f03b0a846df0f1ac75`. Keeping an immutable ref prevents updates on the moving branch from changing an audit result.
 
 Key documents already published by the original project:
 
