@@ -19,6 +19,10 @@ The hardware-verified core implements **Super Spacefortress Macross II**, with n
 | `platform/pocket/megafunctions/mf_audio_pll/mf_audio_pll_0002.v` | Generated Altera/Intel PLL component; local QIP refers to generator version 17.1. | Review Quartus IP redistribution terms and regeneration details. **NOT CLEARED.** |
 | `rtl/m2_*.sv`, `rtl/pocket_pll.v` | Pocket-specific modules developed during Macross II engineering. | Document contributors, third-party derivation and license selection. Absence of SPDX header is not a license grant. **NOT CLEARED.** |
 
+### CP48AU-2 — T80 generation recipe status (2026-10-16)
+
+Local `Documents/Work/Macross 2 ROM assets/T80-master/T80.qip` lists **13 VHDL source files**: `GBse.vhd`, `T80pa.vhd`, `T80s.vhd`, `T80se.vhd`, `T80a.vhd`, `T80as.vhd`, `T80sed.vhd`, `T8080se.vhd`, `T80_Reg.vhd`, `T80_MCode.vhd`, `T80_ALU.vhd`, `T80.vhd`, and `T80_Pack.vhd`. The local VHDL sources exist, but **these have not been proven to be the exact input revisions** to the preserved generated Verilog. The working `reference/rtl/third_party_gen/t80/T80s.v` has 605,568 bytes, SHA-256 `af5f542a42c93f902225a3cf964832d27b20b23a8eacb9a5698445cf8770d2b9`, with Yosys 0.52 header (git `fee39a3284c90249e1d9684cf6944ffbbcbb8f90`). The inspected regression scripts **consume** generated `T80s.v`, they do not reveal its creation command. No exact Yosys VHDL-import/configuration invocation has yet been recovered and no regeneration has been attempted. Preserve this verified generated file unchanged; do not claim source-to-generated-bitstream reproduction until a regeneration reproduces its hash. This open provenance issue does not invalidate the previously successful Quartus synthesis of the existing netlist.
+
 **MAME caveat:** MAME has multiple file licenses; do not use its repository-level GPL terms to override the explicit **BSD-3-Clause** headers of the two specific referenced files. Conversely, the presence of BSD-licensed *reference C++* does not automatically establish that our HDL module is merely an independently licensed implementation. Review provenance before publishing.
 
 ## Active-source inventory and outstanding questions
