@@ -1,0 +1,60 @@
+name: Macross II beta bug report
+description: Report an issue with the Analogue Pocket Macross II FPGA core
+title: "[Beta bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing Macross II. Please report reproducible problems with the FPGA core or packaging. Don't attach copyrighted ROMs, private files, or SD-card contents.
+  - type: input
+    id: version
+    attributes:
+      label: Core version
+      description: Version shown in core metadata or GitHub release.
+      placeholder: 0.14.0-beta.1
+    validations:
+      required: true
+  - type: dropdown
+    id: hardware
+    attributes:
+      label: Hardware configuration
+      options:
+        - Analogue Pocket handheld
+        - Analogue Pocket with Dock
+        - Other / not sure
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Pocket OS version
+      placeholder: "2.7"
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the bug and the expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include stage, game mode, controller input, and approximate elapsed time if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Additional evidence
+      description: Screenshots, photos, short videos, relevant APF debug-log excerpts, or checksums. Do not upload ROMs.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked existing issues for a matching report.
+          required: true
+        - label: This report does not include copyrighted ROM files.
+          required: true
