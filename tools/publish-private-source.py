@@ -71,7 +71,7 @@ def run(*args: str) -> str:
 
 def blob_sha(data: bytes) -> str:
     return hashlib.sha1(
-        b"blob " + str(len(data)).encode("ascii") + b"\\0" + data
+        b"blob " + str(len(data)).encode("ascii") + b"\0" + data
     ).hexdigest()
 
 
@@ -125,7 +125,7 @@ def main() -> None:
         if not source.is_file() or source.is_symlink():
             stop(f"Missing / linked frozen source file: {relative}")
         payload = source.read_bytes()
-        if not payload or b"\\0" in payload:
+        if not payload or b"\0" in payload:
             stop(f"Missing or binary payload, not suitable for this batch: {relative}")
         try:
             payload.decode("utf-8")
