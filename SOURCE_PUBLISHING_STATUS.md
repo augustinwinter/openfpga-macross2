@@ -2,6 +2,16 @@
 
 **Status: controlled upload to a PRIVATE GitHub repository.** Macross II is physically playable in the validated Pocket beta, but **this GitHub checkout is NOT yet complete or independently buildable**. No public release is authorized by this status record.
 
+## CP48BD / CP48BE current checkpoint (2026-10-16)
+
+The CP48BD local GitHub push **PASS** at commit `090a179c2742a2c22f179496aaacd58dcb2b7ec4`, transferring `rtl/pocket_pll.v`, four Quartus QIP files, and `manifests/CP48BD-clock-qip.json`. The verified current tally is **69 of 77 active HDL** in the private repository. This supersedes the older CP48BB intermediate `54/77` and conditional `68/77` notes below (retained for provenance).
+
+All **eight still-untracked active HDL** are specifically identified and explained in [VENDOR_SOURCE.md](VENDOR_SOURCE.md): 4 Analogue APF-derived sources (one with important Macross II changes) and 4 Intel/Altera-generated source files. Read the authoritative [Analogue EULA](https://assets.analogue.co/pdf/43478bf701eb4905172acbecc3babae9/Analogue%2BEULA%2BAugust%2B14%2B2022.pdf) for the difference between distributable **Developer Applications** and restrictions around redistributing APF source. A pinned, verified but **local-only** fetch helper [tools/hydrate-pocket-vendor.py](tools/hydrate-pocket-vendor.py) provides the seven unchanged upstream template files without committing them to GitHub, subject to the original licensing terms. The modified APF command bridge cannot be recovered exactly from pristine public source.
+
+**Separate non-HDL dependency:** `platform/pocket/bsp/pocket/pinouts/system.tcl` is declared by the uploaded Quartus QSF but is **not uploaded**. It exists in the public template, yet byte-equality against the proven frozen Macross II version remains to be checked. The already-uploaded four QIPs have `MISC_FILE` references to missing `.cmp`/`.ppf`, which did not prevent the preserved successful Quartus build.
+
+**DO NOT** interpret a physically validated beta or 69/77 tracked HDL as a complete independent rebuild or legal publication clearance. The actual frozen Pocket RTL/bitstream, ROMs and SD card remain untouched.
+
 ## Verified contents
 
 The active Quartus source closure (CP48AO) comprises **77 HDL files** (73 directly listed by QSF plus four QIP dependencies), as well as non-HDL dependencies. Cross-project audits CP48AV/CP48AW/CP48AX/CP48AY established: **58** exact upstream HDL files, **11** locally modified upstream descendants, **8** project-specific HDL files.
