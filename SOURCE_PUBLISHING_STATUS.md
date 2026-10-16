@@ -68,7 +68,7 @@ Two additional local source files remain **excluded from this automatic transfer
 - `platform/pocket/peripherals/core_bridge_cmd.sv` — its upstream counterpart retains **Analogue's APF Software License Agreement**, not a generic MIT/GPL header; requires the same redistribution review as the three unchanged APF files.
 - `rtl/pocket_pll.v` — creation/license nature (project wrapper versus Intel-generated material) not yet established; source inspection required before any transfer.
 
-Once CP48BB runs and independently confirms all input/output hashes, the active HDL upload count **could** increase from 54 to **68**, leaving **nine** held sources (five APF-related, four Intel/PLL-related) plus QIP/build-support closure. This conditional count is **not** a claim that the import has already happened. A complete source checkout remains unavailable until the vendor/APF holds are resolved.
+Once CP48BB runs and independently confirms all input/output hashes, the active HDL upload count **could** increase from 54 to **68**, leaving **nine** held sources (four APF-related, five Intel/PLL-related) plus QIP/build-support closure. This conditional count is **not** a claim that the import has already happened. A complete source checkout remains unavailable until the vendor/APF holds are resolved.
 
 ## Further requirements before complete independent build
 
