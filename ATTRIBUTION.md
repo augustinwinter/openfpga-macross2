@@ -4,6 +4,10 @@
 
 The hardware-verified core implements **Super Spacefortress Macross II**, with no copyrighted arcade ROM dumps in this repository. Game data and artwork licensing are separate from software/HDL attribution; see [REPRODUCING.md](REPRODUCING.md).
 
+## Current publication evidence — CP48BG
+
+[manifests/ACTIVE-HDL-77.json](manifests/ACTIVE-HDL-77.json) now records the exact 77-file active HDL manifest: 69 published Git blobs and eight locally verified vendor-source SHA-256 values. Original FX68K/JT GPL notices, 13 pinned T80 original VHDL files, GHDL patch, generator and the generated Z80 netlist are present. This supersedes intermediate statements below that describe T80 lineage or exact-pair matching as merely pending; a regenerated T80 bitstream equivalence test is still not claimed. The successful CP48BG local source-closure audit **does not resolve per-file copyright or licensing**. See [RELEASE_READINESS.md](RELEASE_READINESS.md).
+
 ## Confirmed credits and located notices
 
 | Component / active HDL | Upstream source and authorship evidence | Status / required action |

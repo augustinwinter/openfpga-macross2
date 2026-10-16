@@ -20,6 +20,12 @@ A new [read-only Quartus declared-source closure audit](tools/audit-quartus-clos
 
 Current private GitHub source publication remains **69/77 active HDL**. Local hydration can supply remaining dependencies for the owner's private development but is not equivalent to source-code redistribution rights or a public-ready complete package.
 
+## CP48BG user-executed source closure (2026-10-16)
+
+**PASS, declared-source scope only.** The owner ran `tools/hydrate-pocket-vendor.py --accept-upstream-licenses --include-local-bridge` and `tools/audit-quartus-closure.py` on the private Mac checkout: **77/77 active HDL**, **4/4 QIP**, required QSF pinout Tcl + SDC, two checksum-verified FX68K CPU-internal memory files, and **nine** verified APF/Intel/bridge/pinout dependencies. Two absent generated-IP `MISC_FILE` entries (`mf_audio_pll.cmp` and `mf_ddio_bidir_12.ppf`) did not block the earlier Quartus flow. Frozen source and Pocket SD were unchanged, `git status` clean, no vendor HDL staged or pushed.
+
+**Private GitHub inventory** is [ACTIVE-HDL-77.json](manifests/ACTIVE-HDL-77.json): exactly 69 tracked active HDL blobs and eight vendor-origin external-only HDL with local SHA-256 evidence. A read-only inventory verifier is [tools/verify-publication.py](tools/verify-publication.py). This closure result is **not** a fresh Quartus build, a license clearance or a public release. **The owner explicitly declined another build**, so fresh compilation is out of scope.
+
 ## Verified contents
 
 The active Quartus source closure (CP48AO) comprises **77 HDL files** (73 directly listed by QSF plus four QIP dependencies), as well as non-HDL dependencies. Cross-project audits CP48AV/CP48AW/CP48AX/CP48AY established: **58** exact upstream HDL files, **11** locally modified upstream descendants, **8** project-specific HDL files.

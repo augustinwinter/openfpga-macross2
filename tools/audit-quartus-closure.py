@@ -3,7 +3,7 @@
 
 Run after local-only Pocket vendor hydration. Tests QSF/QIP/Tcl, 77 HDL files,
 FX68K microcode, and all exact CP48AY/CP48BF vendor provenance checks.
-This does not synthesize RTL, check transitive HDL \`includes or validate timing.
+This does not synthesize RTL, check transitive HDL includes or validate timing.
 """
 from __future__ import annotations
 

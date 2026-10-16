@@ -72,6 +72,12 @@ The Pocket pinout `platform/pocket/bsp/pocket/pinouts/system.tcl` **was independ
 
 Run `tools/hydrate-pocket-vendor.py --accept-upstream-licenses --include-local-bridge` from the source checkout **only if** you have the protected original frozen Macross II source and have reviewed the upstream terms. The command retrieves seven unchanged vendor HDL files and this pinout at a fixed upstream commit, and independently copies the exact CP48AY-modified APF bridge from the original local source. All eight vendor HDL plus pinout remain untracked/ignored, rather than distributed in GitHub. Run `tools/audit-quartus-closure.py` to verify declared-source existence and hashes before attempting the documented Quartus command. The closure audit and a fresh build are **not yet executed/verified**.
 
+### Recorded CP48BG success and explicit no-rebuild decision
+
+The owner executed a fresh-checkout *source hydration and dependency audit* on October 16, 2026. It passed 77/77 active declared HDL, four QIPs, two other QSF files, FX68K microcode hashes and nine local-vendor/pinout/modified-bridge provenance hashes. The Git checkout remained clean and the frozen physical Pocket core and SD were not modified.
+
+**No fresh Quartus compilation was performed.** The owner requested that the additional test rebuild be skipped, so this repository does not claim an independent rebuild/bitstream/timing verification. The existing tested bitstream remains the engineering baseline; do not present a new build as tested.
+
 ## Rebuilding on an appropriate host
 
 These commands reconstruct the **recorded build invocation** once the complete source tree has been legally published or otherwise made available. They have **not** been rerun from a fresh public checkout:

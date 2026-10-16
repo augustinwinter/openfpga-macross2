@@ -46,6 +46,12 @@ The separate `tools/audit-quartus-closure.py` checks **77 direct/transitive Quar
 
 The locally modified bridge remains **withheld from GitHub** while its APF modification/redistribution rights are unresolved. Replacing it with the pristine upstream bridge would alter the proven implementation.
 
+## CP48BG execution: owner-local source closure confirmed
+
+The private developer checkout successfully hydrated eight vendor-related active HDL (seven exact pinned template modules plus the local modified command bridge) and the proven CP48BF pinout. Every source hash passed. `tools/audit-quartus-closure.py` then reported **77 active HDL, four QIPs, two direct QSF resource files, both FX68K memory images and nine checked external source hashes**. No vendor file was added to Git, and neither hardware nor game assets were touched.
+
+The original modified APF command bridge is required for the actual implementation; the pristine upstream command bridge must never replace it. This proves local declared-source presence, **not permission to redistribute the APF/Intel source**. Publication manifest: [ACTIVE-HDL-77.json](manifests/ACTIVE-HDL-77.json).
+
 ## Four QIPs and missing auxiliary files
 
 CP48BC found **four existing QIP files**: `mf_audio_pll.qip`, `mf_audio_pll/mf_audio_pll_0002.qip`, `mf_datatable.qip`, `mf_ddio_bidir_12.qip`. Two `MISC_FILE` references target absent `mf_audio_pll.cmp` and `mf_ddio_bidir_12.ppf`. Neither was required by the previously successful saved Quartus synthesis/assembler; they are not asserted to be active HDL dependencies. Do not invent their contents.
