@@ -57,7 +57,18 @@ Identical counterparts exist at [plasticbugs/pocket-core-template `c77563fa84bcc
 - `platform/pocket/megafunctions/mf_datatable.v`
 - `platform/pocket/megafunctions/mf_ddio_bidir_12.v`
 
-The three APF files contain **Analogue's own EULA-based Software License Agreement**; the other four are Intel/Altera-generated FPGA IP. Being public in someone else's template does not automatically grant this project permission to republish them under an arbitrary open-source license. The [Analogue EULA](https://www.analogue.co/pocket/developer) and the applicable Intel FPGA IP agreements need review; **do not substitute a blanket GPL declaration** for the original vendor terms. Regenerating vendor output locally may be the appropriate documented solution. These files are intentionally held pending specific authorization or regeneration-path confirmation.
+The three APF files contain **Analogue's own EULA-based Software License Agreement**; the other four are Intel/Altera-generated FPGA IP. Being public in someone else's template does not automatically grant this project permission to republish them under an arbitrary open-source license. The [Analogue EULA](https://www.analogue.link/pocket-eula) and the applicable Intel FPGA IP agreements need review; **do not substitute a blanket GPL declaration** for the original vendor terms. Regenerating vendor output locally may be the appropriate documented solution. These files are intentionally held pending specific authorization or regeneration-path confirmation.
+
+## Automated local import: safely scoped CP48BB
+
+The repository includes [tools/publish-private-source.py](tools/publish-private-source.py), a guarded one-shot importer intended to run **locally** from a fresh clone on the user's Mac. It copies only **14** verified ROM-free files (**seven** locally modified upstream HDL with verified CP48AY Git blob hashes, plus **seven** project-specific HDL) and **three** `projects/m2_pocket.qpf/.qsf/.sdc` configuration files. It preserves frozen input source, creates an import SHA-256 manifest, checks GitHub remains private via authenticated `gh`, and commits/pushes only whitelisted paths. **It has not been executed against the user's Mac.**
+
+Two additional local source files remain **excluded from this automatic transfer** despite the prior "local-only 16" inventory:
+
+- `platform/pocket/peripherals/core_bridge_cmd.sv` — its upstream counterpart retains **Analogue's APF Software License Agreement**, not a generic MIT/GPL header; requires the same redistribution review as the three unchanged APF files.
+- `rtl/pocket_pll.v` — creation/license nature (project wrapper versus Intel-generated material) not yet established; source inspection required before any transfer.
+
+Once CP48BB runs and independently confirms all input/output hashes, the active HDL upload count **could** increase from 54 to **68**, leaving **nine** held sources (five APF-related, four Intel/PLL-related) plus QIP/build-support closure. This conditional count is **not** a claim that the import has already happened. A complete source checkout remains unavailable until the vendor/APF holds are resolved.
 
 ## Further requirements before complete independent build
 
