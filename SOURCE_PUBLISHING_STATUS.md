@@ -12,6 +12,14 @@ All **eight still-untracked active HDL** are specifically identified and explain
 
 **DO NOT** interpret a physically validated beta or 69/77 tracked HDL as a complete independent rebuild or legal publication clearance. The actual frozen Pocket RTL/bitstream, ROMs and SD card remain untouched.
 
+## CP48BF and CP48BG follow-through
+
+**CP48BF PASS:** the required local Pocket pinout Tcl is **exact-byte identical** to the pinned Pocket template: 45,242 bytes, Git blob `42534ded84f0dbf3f454f7f4b1b42bc71c43e43c`, SHA-256 `e30e3c804a31aa38f9de8bb6c184f8dea0868b86c03eda4131f5d00ef0034a95`. The local-only [vendor hydrator](tools/hydrate-pocket-vendor.py) now fetches this pinout automatically along with seven unchanged vendor HDL, and can optionally copy the verified modified APF command bridge directly from the protected frozen Mac source. These files remain ignored/untracked and are **not redistributed in this GitHub repository**.
+
+A new [read-only Quartus declared-source closure audit](tools/audit-quartus-closure.py) checks the 77 active HDL files, four QIPs, Tcl/SDC, two FX68K microcode inputs, and nine local-only vendor/bridge/pinout hashes. The audit **has not yet run on the user's hydrated Mac checkout**, and no fresh Quartus synthesis/rebuild has been performed.
+
+Current private GitHub source publication remains **69/77 active HDL**. Local hydration can supply remaining dependencies for the owner's private development but is not equivalent to source-code redistribution rights or a public-ready complete package.
+
 ## Verified contents
 
 The active Quartus source closure (CP48AO) comprises **77 HDL files** (73 directly listed by QSF plus four QIP dependencies), as well as non-HDL dependencies. Cross-project audits CP48AV/CP48AW/CP48AX/CP48AY established: **58** exact upstream HDL files, **11** locally modified upstream descendants, **8** project-specific HDL files.
