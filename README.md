@@ -28,6 +28,14 @@ A preservation-oriented FPGA implementation of **Super Spacefortress Macross II*
 
 **[RELEASE_READINESS.md — completed private source audit, outstanding third-party permissions and public release gates](RELEASE_READINESS.md)**
 
+## CP48BH-3 — private source-preservation phase closed (2026-10-16)
+
+**PASS, confirmed on the owner's Mac and independently checked in GitHub.** The full local Quartus declared-source inventory of **77/77 HDL** and four QIPs passed CP48BG. The private GitHub repository tracks **69 hash-verified active HDL**; eight APF/Intel-origin HDL are intentionally **local-only**, protected by upstream licensing limitations. CP48BH-3 preserved **two distinct historical Pocket metadata configurations** from two qualifying ZIP archives. The actual snapshot folders are `Cores/August.Macross II/` and `Cores/August.MacrossII/`, with **ten** JSON/text files per snapshot. Both `core.json` entries report an **empty version field**, so the snapshot archive does not assert a final canonical version. The SHA-256 and Git blob integrity of all twenty snapshots' files passed `tools/verify-publication.py`.
+
+**GitHub preservation commit:** [`ae8ee35ac53d0cd7478f174a6bf91b8dd076d0c9`](https://github.com/augustinwinter/openfpga-macross2/commit/ae8ee35ac53d0cd7478f174a6bf91b8dd076d0c9). Snapshot manifest: [`manifests/POCKET-METADATA-SNAPSHOTS.json`](manifests/POCKET-METADATA-SNAPSHOTS.json). No game ROM/PROM, copyrighted artwork, archived ZIP, FPGA RBF/SOF, or SD-card contents were uploaded. The frozen original source, proven Pocket bitstream and SD card are unchanged. The owner explicitly **skipped a fresh FPGA rebuild**; none was conducted.
+
+**Private publication / evidence preservation: COMPLETE. Public source-and-binary release: BLOCKED** by remaining APF/Intel source redistribution permission questions, contributor/project licensing decisions and release/package artwork/asset clearance. Nothing was automatically marked final beta or made public. No routine FPGA work or new test is required for the completed private preservation stage.
+
 ## Staged source publication (private; 2026-10-16)
 
 **Verified CP48BD source publication: 69 of 77 active Quartus HDL are committed in the PRIVATE GitHub repository.** The four Quartus QIPs and three project configuration files have been transferred with integrity manifests.
