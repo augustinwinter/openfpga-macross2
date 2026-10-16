@@ -23,6 +23,19 @@ For **legally obtained original ROM/PROM asset construction and SD installation*
 | Quartus flow | Successful, including assembler; 0 assembler errors and warnings |
 | Timing | Positive reported slacks; detailed applicability and CDC qualification are separate issues |
 
+### Mandatory FX68K CPU microcode memory files (CP48AQ-2)
+
+In addition to the 77 directly declared HDL sources, the synthesis requires **two non-HDL memory initialization files** loaded unconditionally by `reference/rtl/third_party/fx68k/fx68k.sv` (approximately source lines 2496 and 2507):
+
+| Required file | Bytes | Location in verified source tree |
+|---|---:|---|
+| `microrom.mem` | 19,456 | `reference/rtl/third_party/fx68k/microrom.mem` |
+| `nanorom.mem` | 23,520 | `reference/rtl/third_party/fx68k/nanorom.mem` |
+
+The original QSF contains `SEARCH_PATH ../reference/rtl/third_party/fx68k`. The preserved successful `m2_pocket.map.rpt` explicitly lists **both files** as `Auto-Found Unspecified File` at `/build/reference/rtl/third_party/fx68k/`. Both files were also found at the local source root during inspection; do not silently choose a duplicate before comparing its checksum/content with the version in `reference/`.
+
+These are **FX68K processor-internal microcode files**, not copyrighted Macross II game ROM dumps. Include the appropriate upstream files and applicable license/attribution in any complete FPGA source publication; do not omit them just because they are not listed as QSF `*_FILE` assignments. CP48AQ-2 established their presence and synthesis use, but exact duplicate-byte identity and rights/provenance remain to be checked before publication.
+
 The **232** HDL files seen in the broader local source tree include reference and other material; this count must **not** be mistaken for the set compiled by the actual project. The current active-HDL count is based on direct QSF declarations and recursive QIP traversal. Included `\`include` references, non-file Tcl side effects, implicit generated-IP requirements and full license provenance need further independent inspection before claiming absolute dependency closure.
 
 ### Project-file relationships
