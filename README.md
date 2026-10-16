@@ -22,6 +22,12 @@ A preservation-oriented FPGA implementation of **Super Spacefortress Macross II*
 
 **[tools/convert-rbf.py — Pocket FPGA bitstream conversion](tools/convert-rbf.py)**
 
+**[tools/import-pocket-metadata.py — preserve ROM-free core configuration metadata from the already-tested historical package, without rebuilding or committing its RBF](tools/import-pocket-metadata.py)**
+
+**[LICENSING.md — per-component grants, copyright notices and source-redistribution holds](LICENSING.md)**
+
+**[RELEASE_READINESS.md — completed private source audit, outstanding third-party permissions and public release gates](RELEASE_READINESS.md)**
+
 ## Staged source publication (private; 2026-10-16)
 
 **Verified CP48BD source publication: 69 of 77 active Quartus HDL are committed in the PRIVATE GitHub repository.** The four Quartus QIPs and three project configuration files have been transferred with integrity manifests.

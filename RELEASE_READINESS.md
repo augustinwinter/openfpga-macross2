@@ -10,6 +10,11 @@
 - The immutable public-origin source pins, GPL/JT/FX68K notices, original T80 VHDL lineage, four QIPs, relevant build scripts, source provenance and ROM-assembly instructions are included. `tools/verify-publication.py` checks the published manifest and guards against accidentally tracked game/binary assets.
 - The owner **explicitly skipped a fresh Quartus rebuild**. Therefore independent clean-checkout bitstream equality, CDC/timing signoff and fresh hardware testing are unclaimed. There is no requirement to repeat those tests just to finish documentation.
 
+## Pocket metadata without new FPGA compilation
+
+The repository also contains [`tools/import-pocket-metadata.py`](tools/import-pocket-metadata.py). It finds a preserved **historical** Pocket ZIP in the owner's protected `scratch/CP48-clean-macross2/` folder, accepts only one well-defined metadata set with the **verified existing FPGA bitstream SHA-256** `93f7b62a8d8e8760fd7cdddaf334041b2646933b8539f9eebbda568bf12d1a87` present in the archive, and transfers **only** a small allowlist of core JSON/text and `Platforms/nmk16_m2.json` to the private GitHub repository. It records the actual historical metadata version and folder without silently upgrading RC1 to beta. It **does not upload the RBF**, arcade game ROMs, PROMs, artwork or the original package. No Quartus rebuild or hardware retest is performed.
+
+The importer is staged in GitHub but **has not been run** on the owner's Mac. If an older RC1 metadata archive is the only verified match, it will be recorded accurately as RC1 material rather than misrepresented as the newer beta's metadata. This is not a public release authorization.
 ## External blockers before public publication
 
 1. **Analogue APF source rights.** Four active APF-origin files (one locally modified command bridge) and the externally hosted exact Pocket pinout need a documented, permissible public-source delivery model. The original EULA includes both developer-application distribution language and APF software restrictions. Obtain official clarification before uploading the modified APF framework code or asserting public corresponding-source completeness.

@@ -4,6 +4,9 @@
 **Verified installation:** `Macross II`, core version `0.14.0-beta.1`, platform ID `nmk16_m2` (2026-10-15).  
 **Status:** ROM/PROM assembly independently reproduced and byte-verified at checkpoint CP48AJ; the clean core, title art and gameplay were tested on a real Pocket. **Complete public source/build reproduction is not yet available**; see [remaining publication work](#remaining-publication-work). Do not mistake a verified ROM procedure for a verified from-source FPGA rebuild.
 
+### Existing verified build, no further FPGA recompilation
+
+The project owner elected to **skip a fresh Quartus rebuild**. The existing tested `bitstream.rbf_r` is the protected reference; ROM-free metadata can be recovered from historical packages using [`tools/import-pocket-metadata.py`](tools/import-pocket-metadata.py), which neither rebuilds nor uploads the bitstream. The importer must record the exact existing metadata version; a historical RC1 package is not automatically a newly tested beta. The publication is still **private** pending the source/vendor licensing and game-art rights documented in [`RELEASE_READINESS.md`](RELEASE_READINESS.md).
 ## 1. What you need and what cannot be redistributed
 
 You need (a) an Analogue Pocket and microSD card; (b) a legally obtained, correctly dumped **Japanese `macross2` arcade ROM set** with the specific ten files below; (c) an authorized openFPGA core distribution and its `bitstream.rbf_r`, metadata and platform support files; and (d) platform art where licensed for redistribution, or an image you have the right to use.
