@@ -1,0 +1,38 @@
+{
+  "checkpoint": "CP48BD",
+  "description": "Exact private clock-wrapper and QIP import",
+  "files": [
+    {
+      "path": "rtl/pocket_pll.v",
+      "bytes": 1942,
+      "sha256": "f5f268a526771fddfa62729be3a8080f6f34b3a363e5191a70d040c3d2c6ce7b",
+      "git_blob_sha1": "697626f009c642a99f558fe44b5a0de531eca180"
+    },
+    {
+      "path": "platform/pocket/megafunctions/mf_audio_pll.qip",
+      "bytes": 57360,
+      "sha256": "df1e7be47dc9fc334475ab30c575c506b73f7e2360fe8b615fe49c9d25a585e2",
+      "git_blob_sha1": "efec9380fa8dc8277051f48bf5b03d4873775a00"
+    },
+    {
+      "path": "platform/pocket/megafunctions/mf_audio_pll/mf_audio_pll_0002.qip",
+      "bytes": 436,
+      "sha256": "f6263e915fc211ef46db3ec31ce273de547b1ec7d8821679e55aa6b48eae7130",
+      "git_blob_sha1": "916311f662e077a946d15e809b3be764badd7dee"
+    },
+    {
+      "path": "platform/pocket/megafunctions/mf_datatable.qip",
+      "bytes": 266,
+      "sha256": "046abcb5586277d243516e0604fecd8b62876d394f0b1f70c6aa29bb72e89b49",
+      "git_blob_sha1": "9876cc038b032107d462e84627a7710d39786311"
+    },
+    {
+      "path": "platform/pocket/megafunctions/mf_ddio_bidir_12.qip",
+      "bytes": 366,
+      "sha256": "32e946cba208d535d97e8b8ec4e8d4739a9241085da92374e4e677ce7aadd49e",
+      "git_blob_sha1": "40c42668c8ed91a92d167a9d10a49f02f7f4b4e7"
+    }
+  ],
+  "vendor_generated_verilog_included": false,
+  "game_roms_included": false
+}
