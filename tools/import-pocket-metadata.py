@@ -224,7 +224,7 @@ def main() -> None:
         print("  SNAPSHOT:", record["content_fingerprint"])
         print("    VERSION:", record["core_version_as_archived"])
         print("    FOLDER:", record["core_folder_as_archived"])
-        print("    ARCHIVES:", len(record["archives"]))
+        print("    ARCHIVES:", len(record["archives_with_identical_metadata"]))
     print("STAGED BITSTREAMS, GAME ROMS, ARTWORK OR ZIP FILES: 0")
     for dest, payload in output_files.items():
         target = REPO / dest
