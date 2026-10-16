@@ -34,7 +34,16 @@ In addition to the 77 directly declared HDL sources, the synthesis requires **tw
 
 The original QSF contains `SEARCH_PATH ../reference/rtl/third_party/fx68k`. The preserved successful `m2_pocket.map.rpt` explicitly lists **both files** as `Auto-Found Unspecified File` at `/build/reference/rtl/third_party/fx68k/`. Both files were also found at the local source root during inspection; do not silently choose a duplicate before comparing its checksum/content with the version in `reference/`.
 
-These are **FX68K processor-internal microcode files**, not copyrighted Macross II game ROM dumps. Include the appropriate upstream files and applicable license/attribution in any complete FPGA source publication; do not omit them just because they are not listed as QSF `*_FILE` assignments. CP48AQ-2 established their presence and synthesis use, but exact duplicate-byte identity and rights/provenance remain to be checked before publication.
+These are **FX68K processor-internal microcode files**, not copyrighted Macross II game ROM dumps. Include the appropriate upstream files and applicable license/attribution in any complete FPGA source publication; do not omit them just because they are not listed as QSF `*_FILE` assignments.
+
+**CP48AR verified canonical and root duplicates are byte-identical** and present in the successful Quartus mapping report:
+
+| File | Size | SHA-256 |
+|---|---:|---|
+| `reference/rtl/third_party/fx68k/microrom.mem` | 19,456 | `9d13082be0cf4b04bff887e6da23de84f9f2ee4321f3a2576b4f9540615dece6` |
+| `reference/rtl/third_party/fx68k/nanorom.mem` | 23,520 | `b3998009fb10605e8468cddf22fdd799a9792ba86f449de2e30615cfcefbeece` |
+
+The local FX68K `README.md` credits **Jorge Cwik (2018)**, with a `LICENSE` file present (GPLv3). Document the upstream origin and preserve the original notices; the source's redistribution review is still open for the overall project. The root-level duplicate files are not additional distinct source inputs.
 
 The **232** HDL files seen in the broader local source tree include reference and other material; this count must **not** be mistaken for the set compiled by the actual project. The current active-HDL count is based on direct QSF declarations and recursive QIP traversal. Included `\`include` references, non-file Tcl side effects, implicit generated-IP requirements and full license provenance need further independent inspection before claiming absolute dependency closure.
 
