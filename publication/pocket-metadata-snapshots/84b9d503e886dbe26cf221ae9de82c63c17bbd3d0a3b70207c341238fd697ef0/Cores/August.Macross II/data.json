@@ -1,0 +1,31 @@
+{
+  "data": {
+    "magic": "APF_VER_1",
+    "data_slots": [
+      {
+        "name": "Macross II ROM",
+        "id": 0,
+        "required": true,
+        "parameters": "0x8",
+        "filename": "macross2.rom",
+        "extensions": [
+          "rom"
+        ],
+        "size_exact": "0x009C0000",
+        "address": "0x10000000"
+      },
+      {
+        "name": "V Timing PROM",
+        "id": 1,
+        "required": true,
+        "parameters": "0x8",
+        "filename": "macross2_vprom.bin",
+        "extensions": [
+          "bin"
+        ],
+        "size_exact": 256,
+        "address": "0x00000000"
+      }
+    ]
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "checkpoint": "CP48BH2",
+  "status": "Historical metadata candidates only; NO canonical release selection",
+  "validated_tested_rbf_sha256_not_uploaded": "93f7b62a8d8e8760fd7cdddaf334041b2646933b8539f9eebbda568bf12d1a87",
+  "number_of_distinct_metadata_sets": 2,
+  "snapshots": [
+    {
+      "content_fingerprint": "84b9d503e886dbe26cf221ae9de82c63c17bbd3d0a3b70207c341238fd697ef0",
+      "core_folder_as_archived": "Cores/August.Macross II/",
+      "core_version_as_archived": "",
+      "archives_with_identical_metadata": [
+        {
+          "path_relative_to_preserved_folder": "CP48AG-corrected-package/August.Macross-II_0.14.0-beta.1_2026-10-15.zip",
+          "sha256": "501ecf3cb2b6723f2a1e774141c5e0f68ab2374738b3a01e5e50a9cedea16cba"
+        }
+      ],
+      "metadata_files": [
+        {
+          "original_zip_path": "Cores/August.Macross II/AUTHORS.txt",
+          "repository_path": "publication/pocket-metadata-snapshots/84b9d503e886dbe26cf221ae9de82c63c17bbd3d0a3b70207c341238fd697ef0/Cores/August.Macross II/AUTHORS.txt",
+          "bytes": 1332,
+          "sha256": "ed2f278d57df700c1962af9b0ff4936ab9bea2fbd9059d5184e5b2fbbd4eb905",
+          "git_blob_sha1": "150bf2b492cfa2534b86fb4a86d656f4d0dfa373"
+        },
+        {
+          "original_zip_path": "Cores/August.Macross II/audio.json",
+          "repository_path": "publication/pocket-metadata-snapshots/84b9d503e886dbe26cf221ae9de82c63c17bbd3d0a3b70207c341238fd697ef0/Cores/August.Macross II/audio.json",
+          "bytes": 46,
+          "sha256": "32ecc527ee672b4f478b86e35bd0ee5eff474c73183b1b46d5169f09f224e182",
+          "git_blob_sha1": "20cf7f2d94a1e88b026cd2fa982d1a7394ef1a58"
+        },
+        {
+          "original_zip_path": "Cores/August.Macross II/core.json",
+          "repository_path": "publication/pocket-metadata-snapshots/84b9d503e886dbe26cf221ae9de82c63c17bbd3d0a3b70207c341238fd697ef0/Cores/August.Macross II/core.json",
+          "bytes": 810,
+          "sha256": "052045619f766bb73099435eda7f91883c24fd37c98e45e3e59cd2475a8c9184",
+          "git_blob_sha1": "7bbb8966e504c65b74d0860150733a69425eb531"
+        },
+        {
+          "original_zip_path": "Cores/August.Macross II/data.json",
+          "repository_path": "publication/pocket-metadata-snapshots/84b9d503e886dbe26cf221ae9de82c63c17bbd3d0a3b70207c341238fd697ef0/Cores/August.Macross II/data.json",
+          "bytes": 623,
+          "sha256": "9bec6ea952f4f6981e1d3698b6d06bb6e63e0f61f1f9cb9eeff383dffcea42e9",
+          "git_blob_sha1": "95e592ff7da0fab23b5f32008212e40dd7724f28"
+        },
+        {
+          "original_zip_path": "Cores/August.Macross II/info.txt",
+          "repository_path": "publication/pocket-metadata-snapshots/84b9d503e886dbe26cf221ae9de82c63c17bbd3d0a3b70207c341238fd697ef0/Cores/August.Macross II/info.txt",
+          "bytes": 124,
+          "sha256": "c99e0b552fcbbc540106ef4bc27c7ce785e0d53e7fa741fe0d128cb783d5f106",
+          "git_blob_sha1": "4abc1b85912e17ed4bdcf6767e78dc6e32f60092"
+        },
+        {
+          "original_zip_path": "Cores/August.Macross II/input.json",
+          "repository_path": "publication/pocket-metadata-snapshots/84b9d503e886dbe26cf221ae9de82c63c17bbd3d0a3b70207c341238fd697ef0/Cores/August.Macross II/input.json",
+          "bytes": 812,
+          "sha256": "8026b7792354711f4b4c609da82fe5e133749c3ccd274a157f32787bcc340880",
+          "git_blob_sha1": "920d6c783050b500333e8ff3e3af5d380b9b1e2c"
+        },
+        {
+          "original_zip_path": "Cores/August.Macross II/interact.json",
+          "repository_path": "publication/pocket-metadata-snapshots/84b9d503e886dbe26cf221ae9de82c63c17bbd3d0a3b70207c341238fd697ef0/Cores/August.Macross II/interact.json",
+          "bytes": 70,
+          "sha256": "9133c2813b8d9b25d12415813eee01d9a38437cb6f52647b0f1f4f0b19c3c891",
+          "git_blob_sha1": "e8e934219c122dd172d23ae55a22c0c699a4a5b4"
+        },
+        {
+          "original_zip_path": "Cores/August.Macross II/variants.json",
+          "repository_path": "publication/pocket-metadata-snapshots/84b9d503e886dbe26cf221ae9de82c63c17bbd3d0a3b70207c341238fd697ef0/Cores/August.Macross II/variants.json",
+          "bytes": 85,
+          "sha256": "93bedfd28d1160474d79025a1bcaa10cdee8396699851d3ea3d747746a41e3ed",
+          "git_blob_sha1": "57374c91a21104ed95c7d13720c95d655acb7a56"
+        },
+        {
+          "original_zip_path": "Cores/August.Macross II/video.json",
+          "repository_path": "publication/pocket-metadata-snapshots/84b9d503e886dbe26cf221ae9de82c63c17bbd3d0a3b70207c341238fd697ef0/Cores/August.Macross II/video.json",
+          "bytes": 292,
+          "sha256": "0cb37646e839cb1b6641202b5c6ad6591c6b0ee9622ded6bb82b4de0aef6f3e7",
+          "git_blob_sha1": "31ac4cea25ea107e6b3923bbb559b89c18bdfa82"
+        },
+        {
+          "original_zip_path": "Platforms/nmk16_m2.json",
+          "repository_path": "publication/pocket-metadata-snapshots/84b9d503e886dbe26cf221ae9de82c63c17bbd3d0a3b70207c341238fd697ef0/Platforms/nmk16_m2.json",
+          "bytes": 132,
+          "sha256": "6580a369ed156fbdc9cd684611702bd0a37591f262a9292fe37666ee43ac27d2",
+          "git_blob_sha1": "055921518682568bbb6708ba90467ec9a05f45fb"
+        }
+      ]
+    },
+    {
+      "content_fingerprint": "9c9313e88da7f29e0516481fd597047e09d7d613b25bd2f6f67e009e95cd5ce0",
+      "core_folder_as_archived": "Cores/August.MacrossII/",
+      "core_version_as_archived": "",
+      "archives_with_identical_metadata": [
+        {
+          "path_relative_to_preserved_folder": "CP48Y-private-package/August.MacrossII_0.14.0-beta.1_2026-10-15.zip",
+          "sha256": "564cee2e186235fe5dbcbc9b03c504b6f0d5aaf76c2d1e8df184f5ff16e8e086"
+        }
+      ],
+      "metadata_files": [
+        {
+          "original_zip_path": "Cores/August.MacrossII/AUTHORS.txt",
+          "repository_path": "publication/pocket-metadata-snapshots/9c9313e88da7f29e0516481fd597047e09d7d613b25bd2f6f67e009e95cd5ce0/Cores/August.MacrossII/AUTHORS.txt",
+          "bytes": 1332,
+          "sha256": "ed2f278d57df700c1962af9b0ff4936ab9bea2fbd9059d5184e5b2fbbd4eb905",
+          "git_blob_sha1": "150bf2b492cfa2534b86fb4a86d656f4d0dfa373"
+        },
+        {
+          "original_zip_path": "Cores/August.MacrossII/audio.json",
+          "repository_path": "publication/pocket-metadata-snapshots/9c9313e88da7f29e0516481fd597047e09d7d613b25bd2f6f67e009e95cd5ce0/Cores/August.MacrossII/audio.json",
+          "bytes": 46,
+          "sha256": "32ecc527ee672b4f478b86e35bd0ee5eff474c73183b1b46d5169f09f224e182",
+          "git_blob_sha1": "20cf7f2d94a1e88b026cd2fa982d1a7394ef1a58"
+        },
+        {
+          "original_zip_path": "Cores/August.MacrossII/core.json",
+          "repository_path": "publication/pocket-metadata-snapshots/9c9313e88da7f29e0516481fd597047e09d7d613b25bd2f6f67e009e95cd5ce0/Cores/August.MacrossII/core.json",
+          "bytes": 809,
+          "sha256": "6e563beffd9abf5aa66449da9f7df876e03f22999dcdea96edf5310271d4ede4",
+          "git_blob_sha1": "e33bbf227a6b8f4478436e06d1366adcf5540d70"
+        },
+        {
+          "original_zip_path": "Cores/August.MacrossII/data.json",
+          "repository_path": "publication/pocket-metadata-snapshots/9c9313e88da7f29e0516481fd597047e09d7d613b25bd2f6f67e009e95cd5ce0/Cores/August.MacrossII/data.json",
+          "bytes": 623,
+          "sha256": "9bec6ea952f4f6981e1d3698b6d06bb6e63e0f61f1f9cb9eeff383dffcea42e9",
+          "git_blob_sha1": "95e592ff7da0fab23b5f32008212e40dd7724f28"
+        },
+        {
+          "original_zip_path": "Cores/August.MacrossII/info.txt",
+          "repository_path": "publication/pocket-metadata-snapshots/9c9313e88da7f29e0516481fd597047e09d7d613b25bd2f6f67e009e95cd5ce0/Cores/August.MacrossII/info.txt",
+          "bytes": 124,
+          "sha256": "c99e0b552fcbbc540106ef4bc27c7ce785e0d53e7fa741fe0d128cb783d5f106",
+          "git_blob_sha1": "4abc1b85912e17ed4bdcf6767e78dc6e32f60092"
+        },
+        {
+          "original_zip_path": "Cores/August.MacrossII/input.json",
+          "repository_path": "publication/pocket-metadata-snapshots/9c9313e88da7f29e0516481fd597047e09d7d613b25bd2f6f67e009e95cd5ce0/Cores/August.MacrossII/input.json",
+          "bytes": 812,
+          "sha256": "8026b7792354711f4b4c609da82fe5e133749c3ccd274a157f32787bcc340880",
+          "git_blob_sha1": "920d6c783050b500333e8ff3e3af5d380b9b1e2c"
+        },
+        {
+          "original_zip_path": "Cores/August.MacrossII/interact.json",
+          "repository_path": "publication/pocket-metadata-snapshots/9c9313e88da7f29e0516481fd597047e09d7d613b25bd2f6f67e009e95cd5ce0/Cores/August.MacrossII/interact.json",
+          "bytes": 70,
+          "sha256": "9133c2813b8d9b25d12415813eee01d9a38437cb6f52647b0f1f4f0b19c3c891",
+          "git_blob_sha1": "e8e934219c122dd172d23ae55a22c0c699a4a5b4"
+        },
+        {
+          "original_zip_path": "Cores/August.MacrossII/variants.json",
+          "repository_path": "publication/pocket-metadata-snapshots/9c9313e88da7f29e0516481fd597047e09d7d613b25bd2f6f67e009e95cd5ce0/Cores/August.MacrossII/variants.json",
+          "bytes": 85,
+          "sha256": "93bedfd28d1160474d79025a1bcaa10cdee8396699851d3ea3d747746a41e3ed",
+          "git_blob_sha1": "57374c91a21104ed95c7d13720c95d655acb7a56"
+        },
+        {
+          "original_zip_path": "Cores/August.MacrossII/video.json",
+          "repository_path": "publication/pocket-metadata-snapshots/9c9313e88da7f29e0516481fd597047e09d7d613b25bd2f6f67e009e95cd5ce0/Cores/August.MacrossII/video.json",
+          "bytes": 292,
+          "sha256": "0cb37646e839cb1b6641202b5c6ad6591c6b0ee9622ded6bb82b4de0aef6f3e7",
+          "git_blob_sha1": "31ac4cea25ea107e6b3923bbb559b89c18bdfa82"
+        },
+        {
+          "original_zip_path": "Platforms/nmk16_m2.json",
+          "repository_path": "publication/pocket-metadata-snapshots/9c9313e88da7f29e0516481fd597047e09d7d613b25bd2f6f67e009e95cd5ce0/Platforms/nmk16_m2.json",
+          "bytes": 132,
+          "sha256": "6580a369ed156fbdc9cd684611702bd0a37591f262a9292fe37666ee43ac27d2",
+          "git_blob_sha1": "055921518682568bbb6708ba90467ec9a05f45fb"
+        }
+      ]
+    }
+  ],
+  "strict_exclusions": [
+    "bitstream.rbf_r",
+    "arcade ROM",
+    "PROM dumps",
+    "original game artwork",
+    "complete package ZIP",
+    "SD-card contents",
+    "FPGA compilation outputs"
+  ],
+  "not_asserted": [
+    "which historical metadata snapshot was physically tested",
+    "public distribution rights",
+    "new FPGA build",
+    "new hardware test"
+  ]
+}

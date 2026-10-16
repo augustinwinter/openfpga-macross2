@@ -1,0 +1,26 @@
+Macross Ver.26 - Stage26 package credits
+
+August Wong
+Doctor Lucy van Pelt
+Codex Jordan
+
+Original arcade game: Banpresto / NMK, 1992.
+Pocket template lineage: plasticbugs/analogue-pocket-mycore.
+Displayed author: August Wong, Lucy, Codex Jordan
+Full project authors: August Wong / Doctor Lucy van Pelt / Codex Jordan
+Core folder: August Wong, Lucy, Codex Jordan.Macross A7
+Macross A7 shortname is retained. Existing Settings stored under
+plasticbugs.Macross A7 require copying to the new identity to carry them forward.
+The Pocket platform display name is independently set to Macross Ver.26.
+Full credits also appear in core.metadata.description and info.txt.
+This presentation pass does not change the Stage26 FPGA bitstream.
+
+Upstream acknowledgements (original source notices and licenses remain in force):
+plasticbugs - inherited Pocket template and package lineage.
+Marcus Andrade / OpenGateware / Raetro - Pocket platform and build lineage.
+Jorge Cwik - FX68K 68000 core.
+Jose Tejada Gomez (Jotego) - JT03/JT12, JT49 and JT6295 sound cores.
+Analogue Enterprises Limited - Analogue Pocket Framework.
+MAME contributors - hardware reference; retain individual driver credits.
+Alexey Melnikov, Alan Steremberg, Jim Gregory, Till Harbaum, Adam Gastineau
+and Jacob Boline - contributors acknowledged by the project Pocket sources.

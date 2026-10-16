@@ -1,0 +1,4 @@
+Macross II
+Analogue Pocket openFPGA arcade core.
+Beta 1 - community testing requested.
+Hardware-tested FPGA implementation.
