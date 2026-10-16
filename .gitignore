@@ -45,3 +45,15 @@ build_id.mif
 __MACOSX/
 *~
 *.swp
+
+# Vendor-provided APF / Intel source material: obtain independently
+# under the applicable licenses; do not accidentally commit hydrated copies.
+platform/pocket/bsp/pocket/apf_top.sv
+platform/pocket/bsp/pocket/pinouts/system.tcl
+platform/pocket/peripherals/io_bridge_peripheral.sv
+platform/pocket/peripherals/io_pad_controller.sv
+platform/pocket/peripherals/core_bridge_cmd.sv
+platform/pocket/megafunctions/mf_audio_pll/mf_audio_pll_0002.v
+platform/pocket/megafunctions/mf_audio_pll.v
+platform/pocket/megafunctions/mf_datatable.v
+platform/pocket/megafunctions/mf_ddio_bidir_12.v
