@@ -1,0 +1,45 @@
+# Game ROM and firmware payloads are strictly user-supplied, never source-controlled.
+*.rom
+*.chd
+*.zip
+macross2_vprom.bin
+nmk004.bin
+Assets/**/common/*.bin
+Assets/**/common/*.rom
+Assets/**/common/*.zip
+
+# Original game artwork and captured assets; public-safe replacements need explicit review.
+Platforms/_images/*.bin
+reference-media/
+private/
+preservation/
+captures/
+fixtures/private/
+
+# FPGA binary outputs and temporary build artifacts.
+*.sof
+*.pof
+*.jic
+*.rbf
+*.rbf_r
+*.rpd
+db/
+incremental_db/
+output_files/
+obj_dir/
+obj_*/
+build/
+release/
+*.qws
+*.smsg
+*.vcd
+*.fst
+*.log
+build_id.mif
+
+# macOS and editor sidecars.
+.DS_Store
+._*
+__MACOSX/
+*~
+*.swp
