@@ -18,6 +18,8 @@ A preservation-oriented FPGA implementation of **Super Spacefortress Macross II*
 
 **[ATTRIBUTION.md — upstream contributors, license evidence, and unresolved provenance checks](ATTRIBUTION.md)**
 
+**[CROSS_PROJECT_REUSE.md — reuse previously verified Macross Ver.26 dependencies without repeating their provenance audits](CROSS_PROJECT_REUSE.md)**
+
 **[tools/convert-rbf.py — Pocket FPGA bitstream conversion](tools/convert-rbf.py)**
 
 The project does **not** distribute copyrighted Macross II arcade game ROMs, timing PROM dumps, or uncleared original artwork. Owners must obtain required game data lawfully and assemble it locally. The reproduction guide lists all ten ROM chips with sizes, fixed offsets and SHA-256 checksums, and explains what still needs to be supplied for public release. It also identifies outstanding source and Quartus reproducibility work. Do not confuse the current documentation with a complete public RTL source release.
