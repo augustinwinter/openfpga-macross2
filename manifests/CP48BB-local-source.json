@@ -1,0 +1,127 @@
+{
+  "checkpoint": "CP48BB",
+  "private_repo": "augustinwinter/openfpga-macross2",
+  "source_root_relative": "scratch/CP48-clean-macross2/source",
+  "description": "Exact private source import; no game assets or vendor IP",
+  "files": [
+    {
+      "path": "derived/sdram.sv",
+      "size": 26849,
+      "git_blob_sha1": "608c0a97e199a96dda122f0aa081e7262e1aeaff",
+      "sha256": "926ea617559fccf0650461986e1d758d6bfa846d3357fd77b6d5c12c55ee773c",
+      "provenance": "CP48AY verified descendant"
+    },
+    {
+      "path": "derived/sdram_arb.sv",
+      "size": 5588,
+      "git_blob_sha1": "82e98256a82dda476be6070df9296a40bb748431",
+      "sha256": "088ce7f7ba75eb5a65c367b379a0ee39133532b2878ae6f13680d3eb28493fb8",
+      "provenance": "CP48AY verified descendant"
+    },
+    {
+      "path": "derived/sdram_req.sv",
+      "size": 5207,
+      "git_blob_sha1": "44c4c577dd6842b7c19d1b2b104eda97bafae753",
+      "sha256": "f3905af5f69926f745e0c081fb2d682a8eeb0124dd867dd21049fc645736610c",
+      "provenance": "CP48AY verified descendant"
+    },
+    {
+      "path": "derived/tdragon2_core.sv",
+      "size": 135838,
+      "git_blob_sha1": "fcfbeae8c2ddf157a8b500faa22ff54e3afdcb3c",
+      "sha256": "c1ddd7d8b81aecf64536722675a9ade37be928813da896f7f842989bded1f359",
+      "provenance": "CP48AY verified descendant"
+    },
+    {
+      "path": "derived/video_macross2.sv",
+      "size": 85171,
+      "git_blob_sha1": "c344f1e68639c40a40754c046821d1b19914552c",
+      "sha256": "7c2a36c94e8d173d708a9cfec25e3561d31bb4cbae8455a11baec2f78aafb6d5",
+      "provenance": "CP48AY verified descendant"
+    },
+    {
+      "path": "reference/rtl/third_party/fx68k/fx68k.sv",
+      "size": 78711,
+      "git_blob_sha1": "b326f23a9f8dd13d58e872ebf0db2c26d8914919",
+      "sha256": "1d47c24d4138725117433bf5d4270f7fd1f67a18bacef0a60c8fa3d7476cb686",
+      "provenance": "CP48AY verified descendant"
+    },
+    {
+      "path": "target/pocket/core_top.sv",
+      "size": 41993,
+      "git_blob_sha1": "e8fc88becb6a264518b4c948cb6af8eb0f39a488",
+      "sha256": "3230e4718854051dc27ad6b5719205964a4fca7bf531a7c7dac94905c1c3d69c",
+      "provenance": "CP48AY verified descendant"
+    },
+    {
+      "path": "rtl/m2_apf_loader.sv",
+      "size": 3279,
+      "git_blob_sha1": "21deedbbe51c1d0fb0442a2f83985b4309729f94",
+      "sha256": "07e36416372b490a76b0ea75760c9b92946b328913926f984a8852802db37900",
+      "provenance": "Macross II local project/config source"
+    },
+    {
+      "path": "rtl/m2_audio_cdc.sv",
+      "size": 686,
+      "git_blob_sha1": "eaa03421de6fd15676bf40815fa7f7af2241c488",
+      "sha256": "52f4b39ef70d2fd020c3f93fdca69c833538271c9024c20da0504188062799d1",
+      "provenance": "Macross II local project/config source"
+    },
+    {
+      "path": "rtl/m2_gameplay_video.sv",
+      "size": 1051,
+      "git_blob_sha1": "708950c15939969623ef9403d3f278d07294609e",
+      "sha256": "3f52fd61b670d45a9e09d98b23f328307bde0f6046eeee7164b49c00edd9da68",
+      "provenance": "Macross II local project/config source"
+    },
+    {
+      "path": "rtl/m2_main_sdram.sv",
+      "size": 2120,
+      "git_blob_sha1": "ad885ba754d556a9ccf65aa55a27ae135159f7da",
+      "sha256": "a51c4c373349fb20fb1fcb202a556ab24df9d5ba5f39fb2d8c27f8f8523a9a34",
+      "provenance": "Macross II local project/config source"
+    },
+    {
+      "path": "rtl/m2_memory.sv",
+      "size": 1744,
+      "git_blob_sha1": "2f3fba18e3cf997563fcd2855e96234f9879a6c3",
+      "sha256": "0438f06f7da5340bbdf28b6825b84925660cce25137a3e6cf7d91b14c61778d9",
+      "provenance": "Macross II local project/config source"
+    },
+    {
+      "path": "rtl/m2_pocket_machine.sv",
+      "size": 7677,
+      "git_blob_sha1": "355b77933412d53196905eabaef7548507afb204",
+      "sha256": "5f8a645fd014de49f3edbf6edad7864d1ae51e27bac7a8bde0e30bdd8e625102",
+      "provenance": "Macross II local project/config source"
+    },
+    {
+      "path": "rtl/m2_prom_guard.sv",
+      "size": 461,
+      "git_blob_sha1": "e56292c466acc0daed939509c0fef27072d1773f",
+      "sha256": "4b74797be36e1f518f0a1787348dbd6b732896b01369a0f56c5bc87cea6c0b20",
+      "provenance": "Macross II local project/config source"
+    },
+    {
+      "path": "projects/m2_pocket.qpf",
+      "size": 56,
+      "git_blob_sha1": "38d0d8065bcc57443ee0d91bbd28cd5c08aa8fe4",
+      "sha256": "b92273aec561e359799d47bdd37bcfeb9de72fc755c404a3303c1daf38dbb5d8",
+      "provenance": "Macross II local project/config source"
+    },
+    {
+      "path": "projects/m2_pocket.qsf",
+      "size": 53018,
+      "git_blob_sha1": "cfdf3750eddd2984343d184f32b96dba2a4bfe55",
+      "sha256": "763539127288f8276234e870b508382d173ae4fdfcae7880273f140c62568c1d",
+      "provenance": "Macross II local project/config source"
+    },
+    {
+      "path": "projects/m2_pocket.sdc",
+      "size": 11390,
+      "git_blob_sha1": "f9f9b9accb260ca19a819b4669e574d7083a0f7c",
+      "sha256": "ed648025e56674c677ad2e385e57dfd0e372249ac6e0e6a6b8fe08023bd2ef8e",
+      "provenance": "Macross II local project/config source"
+    }
+  ]
+}
