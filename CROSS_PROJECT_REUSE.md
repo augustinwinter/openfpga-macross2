@@ -45,6 +45,39 @@ Classify **each active Macross II HDL** and required non-HDL companion as:
 
 Do **not** transfer original Macross's ROM map, original core/project identifiers (`August.Macross`, `nmk16`), 320×224/270° presentation assumptions, build reports, bitstream hashes, or frozen Stage26 HDL manifest as if they belonged to Macross II. The active Macross II FPGA baseline is 77 HDL files and two FX68K microcode memory files; its hardware-tested Pocket bitstream SHA-256 is `93f7b62a8d8e8760fd7cdddaf334041b2646933b8539f9eebbda568bf12d1a87`.
 
+## CP48AV results — exact local-to-public comparison (2026-10-16)
+
+The user ran a read-only Git blob content-hash comparison from the **actual frozen Macross II Quartus QSF and four recursively resolved QIPs** against the Ver.26 publication tree SHA `816579cab1863414d87033f03b0a846df0f1ac75`. The project had **77 active HDL files** and **6 selected companion files**. Results:
+
+| Classification | Active HDL | Non-HDL companions | Total |
+|---|---:|---:|---:|
+| **EXACT byte match** | **38** | **6** | **44** |
+| Same filename, different bytes | **3** | 0 | **3** |
+| No counterpart in the published Ver.26 tree | **36** | 0 | **36** |
+| **Total inspected** | **77** | **6** | **83** |
+
+**38 exact HDL:** **35** `platform/pocket/` integration modules and three upstream files:
+
+- `reference/rtl/third_party/fx68k/uaddrPla.sv` ↔ Ver.26 `modules/cpu-fx68k/uaddrPla.sv`
+- `reference/rtl/third_party/jt12/hdl/jt03.v` ↔ Ver.26 `modules/jt03/jt03.v`
+- `reference/rtl/third_party/jt6295/hdl/jt6295.v` ↔ Ver.26 `modules/jt6295/jt6295.v`
+
+**Six exact non-HDL companions:** `fx68k/microrom.mem`, `fx68k/nanorom.mem`, and four copies of original component GPL `LICENSE` files (FX68K, JT12, nested JT49, JT6295); some identical license bodies occur at multiple Ver.26 source paths. Earlier CP48AR confirms the local memory hashes. A shared license body alone does not identify the licensing status of every surrounding source file.
+
+**Three same-basename, different-byte HDL requiring targeted diffs:**
+
+- `derived/jt12_exprom.v` ↔ `modules/jt03/jt12_exprom.v`
+- `derived/jt12_logsin.v` ↔ `modules/jt03/jt12_logsin.v`
+- `derived/jt49_exp.v` ↔ `modules/jt49/jt49_exp.v`
+
+**36 HDL absent from the *previously published* Ver.26 snapshot:** `derived/` **5**, `platform/` **8**, `reference/` **14**, `rtl/` **8**, `target/` **1**. **Absence from this partial publication is not evidence of independent authorship.** Some of these exact files may originate from the pre-existing NMK16 MiSTer implementation or from unpublished Ver.26 RTL.
+
+**Consequences:** Reuse the file-specific Ver.26 source-provenance and license evidence for **exact matches**, subject to the original publication's caveats; do **not** silently label all 38 as license-cleared or replace any three modified audio files. Focus new work on resolving remaining source provenance and comparing to upstream.
+
+## Next evidence source: NMK16 MiSTer pinned tree
+
+The [kuzearcade/Arcade-NMK16_MiSTer](https://github.com/kuzearcade/Arcade-NMK16_MiSTer) repository is an additional upstream evidence source, **not a replacement for the tested Pocket RTL**. A GitHub read on 2026-10-16 identified commit `4c9b923a87dcefee27574a8a06361e47e8e9b963`, tree `4a5f1a57bef1b0a02f5879e7defb6b490e33169e`, with **796 tracked blobs**. It contains paths corresponding to previously unmatched modules, including `rtl/tdragon2/tdragon2_core.sv`, `rtl/macross2/video_macross2.sv`, `rtl/nmk112/nmk112.sv`, `rtl/nmk_irq/nmk_irq.sv`, `rtl/rom_cache*`, `rtl/oki_rom_cache.sv`, `rtl/sdram*.sv` and `rtl/third_party_gen/t80/T80s.v`. Those are **candidate related filenames, not yet proven identical local files**. Compare SHA-1 Git blobs against the **fixed** upstream tree before carrying forward attribution or concluding that the Pocket integration modified them.
+
 ## Outcome required for closing CP48AV
 
 A read-only inventory report from the actual local **Macross II clean source**, showing exact matches, basename-related versions, and absent published counterparts. Only after reviewing that report should we import the original Macross **license evidence and attribution** for specifically matched components. Never silently copy/source-replace/overwrite active RTL, the private release, or Pocket SD files.
