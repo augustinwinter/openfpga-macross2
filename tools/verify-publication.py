@@ -110,6 +110,50 @@ def main() -> None:
     if forbidden:
         raise RuntimeError(f"Unexpected binaries/game assets in Git: {forbidden}")
 
+    history_name = "manifests/POCKET-METADATA-SNAPSHOTS.json"
+    history_files = set()
+    snapshot_count = 0
+    if history_name in tracked:
+        history = json.loads((ROOT / history_name).read_text(encoding="utf-8"))
+        snapshots = history.get("snapshots", [])
+        if (
+            history.get("number_of_distinct_metadata_sets") != len(snapshots)
+            or not snapshots
+        ):
+            raise RuntimeError("Pocket metadata snapshot manifest is inconsistent")
+        for snap in snapshots:
+            fingerprint = snap["content_fingerprint"]
+            if len(fingerprint) != 64 or any(
+                char not in "0123456789abcdef" for char in fingerprint
+            ):
+                raise RuntimeError("Invalid Pocket snapshot identifier")
+            for item in snap["metadata_files"]:
+                p = item["repository_path"]
+                prefix = f"publication/pocket-metadata-snapshots/{fingerprint}/"
+                if (
+                    not p.startswith(prefix)
+                    or ".." in Path(p).parts
+                    or p in history_files
+                    or p not in tracked
+                ):
+                    raise RuntimeError(f"Unexpected Pocket metadata path: {p}")
+                content = (ROOT / p).read_bytes()
+                if (
+                    len(content) != item["bytes"]
+                    or hashlib.sha256(content).hexdigest() != item["sha256"]
+                    or blob_sha(content) != item["git_blob_sha1"]
+                    or not p.lower().endswith((".json", ".txt"))
+                ):
+                    raise RuntimeError(f"Pocket metadata hash/type mismatch: {p}")
+                history_files.add(p)
+        unexpected = {
+            p for p in tracked
+            if p.startswith("publication/pocket-metadata-snapshots/")
+        } - history_files
+        if unexpected:
+            raise RuntimeError(f"Unmanifested Pocket metadata: {sorted(unexpected)}")
+        snapshot_count = len(snapshots)
+
     print("=== VERIFIED SOURCE PUBLICATION INVENTORY ===")
     print("Active Quartus HDL: 77")
     print("Git-tracked HDL matching source manifest: 69 PASS")
@@ -117,6 +161,7 @@ def main() -> None:
     print("Quartus QIP files: 4 PASS")
     print("Pocket pinout: local-only, hash-checked when present")
     print("Git-tracked ROM/FPGA outputs: 0 PASS")
+    print("ROM-free Pocket metadata snapshots hash-verified:", snapshot_count)
     print("No FPGA build, vendor redistribution, or Pocket test performed.")
     print("SOURCE-MANIFEST AUDIT: PASS")
 
