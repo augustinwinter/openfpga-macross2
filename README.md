@@ -4,7 +4,7 @@
 
 # Macross II — Analogue Pocket openFPGA
 
-A preservation-oriented FPGA implementation of **Super Spacefortress Macross II** (Japanese NMK165 arcade hardware) for the Analogue Pocket. Maintained by August.
+A preservation-oriented FPGA implementation of **Super Spacefortress Macross II** (Japanese NMK165 arcade hardware) for the Analogue Pocket. Like my first effort, this was done entirely with the help of ChatGPT / Codex, and done as a proof of concept. I am not a developer.
 
 **Status (2026-10-15): private beta `0.14.0-beta.1`, verified playable on physical Pocket hardware. Not yet cleared for public release.** The core appears as **Macross II** under openFPGA → Arcade and as **Macross II 0.14.0-beta.1** in Developer → Builds. The original game banner, startup, sound, graphics and gameplay passed the reported Pocket checks. This is not a claim of exhaustive long-duration, Dock, or controller-configuration qualification.
 
